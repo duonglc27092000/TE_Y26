@@ -1,0 +1,1 @@
+fix lỗi đèn kblight nhấp nháy khi chuyển sang led 2

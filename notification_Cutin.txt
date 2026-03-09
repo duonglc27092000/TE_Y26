@@ -1,0 +1,34 @@
+
+____________10:33 AM 2/9/2026______________
+
+Model:Arwing, Arches15, Diablo_ARL, seri Jarvis(Line A4), seri Jade, GR_ARL (line A4)
+Line:A4,A5
+Stage:TS
+Change Program: change logic RetestRGB follow new Rule (No Retest RGB if log PASS)
+LocationPath:\WlanCopy\FA_PRO\RGB\RGB_ReTest_New_ACL.BAT
+LocationPath:\WlanCopy\FA_PRO\RGB\RGB_Retest_Display_Color\RGB_Retest_Display_Color.py
+Verify: 10pcs
+请知悉！！
+________________________
+
+________________________1:51 PM 3/2/2026________________________
+
+Model:HP_PTL_UI
+Line:ALL
+Stage:TO
+Change Program:
+1. add UPAUTOTESTLOG.BAT
+2. update run SAFE64.py 
+3. disConnection Wlan when Connection Ethernet
+请知悉！！
+
+________________________
+
+
+Issue: A5B HDD Copy BOMADD NG 
+After re-checking
+=>Only Model ARWING_PRL Bomadd Fail
+Reason: Image not delete Bomadd.log when Backup gob
+Influence: No eddect => Connected to the shared Wi-Fi network
+S\T:Continue Follow 
+L\T:rebackup model Image ARWing_RPL (backup done) => wait tryrun & cuttin 

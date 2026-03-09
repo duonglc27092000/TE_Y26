@@ -1,0 +1,142 @@
+[07/13/2025 20:25:19] 
+--program file--                         
+['D:\\FA_PRO\\HWINFO\\Hwinfo.py', 'checkbblTimeout_new']                         
+--command--                         
+set usea3wmi=0                         
+--errcode--                         
+0                         
+--stdout--                         
+                         
+--stderr--                         
+                      
+[07/13/2025 20:25:19] 
+--program file--                         
+['D:\\FA_PRO\\HWINFO\\Hwinfo.py', 'checkbblTimeout_new']                         
+--command--                         
+set usea3wmi=1                         
+--errcode--                         
+0                         
+--stdout--                         
+                         
+--stderr--                         
+                      
+[07/13/2025 20:25:33] 
+--program file--                         
+['D:\\FA_PRO\\HWINFO\\Hwinfo.py', 'checkbblTimeout_new']                         
+--command--                         
+D:\FA_PRO\CHARGE\Battery.exe -ix                         
+--errcode--                         
+0                         
+--stdout--                         
+Battery x64 factory customer release 6130.1 
+
+(Testing Primary Battery)
+    Commodity               = Battery
+    ChargeCycles            = 4
+    Temperature             = 39C
+    Voltage                 = 12410mV
+    Current                 = 5542mA
+    RemainingCapacity       =  2.290Ah
+    FullCapacity            =  4.654Ah
+    RelativeCharge          =  49%
+    BatteryHealth           = 100%
+    DesignCapacity          = 54Wh,46Wh
+    ManufacturerName        = BYD-BYD4.701
+    DeviceChemistry         = LiP
+    DeviceName              = DELL 60GY0556
+    ManufactureAccess       = 188
+    ManufactureDate         = 5/6/2025
+    SerialNumber            = 6c1
+(Primary Battery Test Results)
+Status: Pass
+
+(Testing Charger)
+  AC Adapter Present: Yes
+  AC Adapter Power: 100 Watts
+(Charger Test Results)
+Status: Pass
+ModErrorLevel=0                         
+--stderr--                         
+                      
+[01/21/2026 12:55:00] 
+--program file--                         
+['D:\\FA_PRO\\HWINFO\\Hwinfo.py', 'checkbblTimeout_new']                         
+--command--                         
+set usea3wmi=0                         
+--errcode--                         
+0                         
+--stdout--                         
+                         
+--stderr--                         
+                      
+[01/21/2026 12:55:00] 
+--program file--                         
+['D:\\FA_PRO\\HWINFO\\Hwinfo.py', 'checkbblTimeout_new']                         
+--command--                         
+set usea3wmi=1                         
+--errcode--                         
+0                         
+--stdout--                         
+                         
+--stderr--                         
+                      
+[01/21/2026 12:55:03] 
+--program file--                         
+['D:\\FA_PRO\\HWINFO\\Hwinfo.py', 'checkbblTimeout_new']                         
+--command--                         
+D:\FA_PRO\CHARGE\Battery.exe -ix                         
+--errcode--                         
+0                         
+--stdout--                         
+Battery x64 factory customer release 6130.1 
+
+(Testing Primary Battery)
+    Commodity               = Battery
+    ChargeCycles            = 0
+    Temperature             = 33C
+    Voltage                 = 12121mV
+    Current                 = 3629mA
+    RemainingCapacity       =  1.627Ah
+    FullCapacity            =  4.654Ah
+    RelativeCharge          =  35%
+    BatteryHealth           = 100%
+    DesignCapacity          = 54Wh,46Wh
+    ManufacturerName        = BYD-BYD4.701
+    DeviceChemistry         = LiP
+    DeviceName              = DELL 60GY05BQ
+    ManufactureAccess       = 188
+    ManufactureDate         = 11/26/2025
+    SerialNumber            = a3f
+(Primary Battery Test Results)
+Status: Pass
+
+(Testing Charger)
+  AC Adapter Present: Yes
+  AC Adapter Power: 100 Watts
+(Charger Test Results)
+Status: Pass
+ModErrorLevel=0                         
+--stderr--                         
+                      
+[03/09/2026 09:49:22] 
+--program file--                         
+['D:\\FA_PRO\\HWINFO\\Hwinfo.py', 'checkbblTimeout_new']                         
+--command--                         
+set usea3wmi=0                         
+--errcode--                         
+0                         
+--stdout--                         
+                         
+--stderr--                         
+                      
+[03/09/2026 09:49:22] 
+--program file--                         
+['D:\\FA_PRO\\HWINFO\\Hwinfo.py', 'checkbblTimeout_new']                         
+--command--                         
+set usea3wmi=1                         
+--errcode--                         
+0                         
+--stdout--                         
+                         
+--stderr--                         
+                      

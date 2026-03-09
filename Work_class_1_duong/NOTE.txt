@@ -1,0 +1,14 @@
+后台检测DeviceYB(静-动-静)
+các device in ghi lại dc
+______________________________________________
+Device Index : 1
+HardwareID:
+	USB\VID_0C45&PID_6A27&REV_4301&MI_02
+	USB\VID_0C45&PID_6A27&MI_02
+Device name: Integrated IR Webcam
+Status: Unknown
+
+_____________________________________________
+
+
+

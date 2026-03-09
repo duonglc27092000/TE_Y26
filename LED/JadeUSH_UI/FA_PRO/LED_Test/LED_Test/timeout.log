@@ -1,0 +1,11 @@
+Enumeration Attribute : 
+Name : KbdBacklightTimeoutBatt
+ReadOnly : False
+Display Name : Keyboard Backlight Timeout on Battery
+Help String : This feature defines the timeout value for the keyboard backlight when the system is running only on battery power. The keyboard backlight timeout value is only in effect when the backlight is enabled.If the selection of 'Never' is made, the backlight will stay on at all times when the system is running on battery power.
+
+Possible Values : 5s 10s 15s 30s 1m 5m 15m Never 
+Possible Values (Display Name) : 5 seconds, 10 seconds, 15 seconds, 30 seconds, 1 minute, 5 minute, 15 minute, Never
+Default Values : 10s 
+Current Value : Never 
+

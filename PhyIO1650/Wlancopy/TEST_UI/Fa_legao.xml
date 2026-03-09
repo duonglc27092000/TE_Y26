@@ -1,0 +1,847 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<TESTINFO>
+<MODEL>HP_PTL_HCB_IO</MODEL>
+<STATION ID="BASETU">
+  <THREAD NUM="1">
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_mô_hình_检查机种</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\CheckModel\CheckModel.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckModel.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+
+	<TESTITEM>
+	   <ITEM_NAME>Kết_nối_với_mạng_không_dây_连接无线网络</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\LinkAP\LinkAP.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LinkAP.jpg</PICTURE_FILE>
+	</TESTITEM>
+		
+	<TESTITEM>
+       <ITEM_NAME>Cập_nhật_chương_trình_kiểm_tra_更新测试程式</ITEM_NAME>           
+       <BATCH_FILE>D:\FA_PRO\BaseXML\TS_Update\TS_Update.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\TS_Update.jpg</PICTURE_FILE>
+	</TESTITEM>	
+    
+	<TESTITEM>
+       <ITEM_NAME>Common_TS_Update_chương_trình_kiểm_tra_Common_TS_更新测试程式</ITEM_NAME>           
+       <BATCH_FILE>D:\BURNIN\Update\Common_TS_Update.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\TS_Update.jpg</PICTURE_FILE>
+	</TESTITEM>	
+
+	<TESTITEM>
+       <ITEM_NAME>ChangeTimeZone</ITEM_NAME>           
+       <BATCH_FILE>D:\FA_PRO\TimeZone\ChangeTimeZone.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LinkAP.jpg</PICTURE_FILE>
+	</TESTITEM>	
+
+	<TESTITEM>
+	   <ITEM_NAME>Nhận_ServiceTag_获取ServiceTag</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSVC\GetSVC.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\GetSVC.jpg</PICTURE_FILE>
+	</TESTITEM>		
+		
+	<TESTITEM>
+	   <ITEM_NAME>Nhận_thông_tin_SFCS_của_máy_获取机台SFCS信息</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\GetSfcsInfo.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\GetSfcsInfo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+       <ITEM_NAME>copyretest_copyretest</ITEM_NAME>           
+       <BATCH_FILE>D:\copyretest.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\TS_Update.jpg</PICTURE_FILE>
+	</TESTITEM>	
+
+
+	<TESTITEM>
+	   <ITEM_NAME>Tạo_tệp_CFG_生成CFG文件</ITEM_NAME>               
+	   <BATCH_FILE>D:\FA_PRO\Getcfg\Getcfg.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Getcfg.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+       <ITEM_NAME>LoadXML_LoadXML</ITEM_NAME>           
+       <BATCH_FILE>D:\FA_PRO\BaseXML\TS_Update\LoadFAXML.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\TS_Update.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+		<ITEM_NAME>Xác_thực_WDL_Safe_WDL_Safe认证</ITEM_NAME>               
+		<BATCH_FILE>D:\FA_PRO\SAFE\WDLSAFE.bat</BATCH_FILE>
+		<PICTURE_FILE>D:\TEST_UI\Picture_UI\Safe.jpg</PICTURE_FILE>
+	</TESTITEM> 
+	
+	<TESTITEM>
+	   <ITEM_NAME>Đặt_chế_độ_gốc_设置工厂模式</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\Setmode\Setmode.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Setmode.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	   <ITEM_NAME>setKBBLON_setKBBLON</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\KBLIGHT\KBBLON.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	
+	<TESTITEM>
+	    <ITEM_NAME>Hoàn_tất_chuẩn_bị_cơ_sở_Base准备完成</ITEM_NAME>           
+	    <BATCH_FILE>\FA_PRO\BaseXML\ReloadXML\BaseEnd.bat</BATCH_FILE>
+	    <PICTURE_FILE>D:\TEST_UI\Picture_UI\TS_Update.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+  </THREAD> 
+</STATION>
+
+<STATION ID="TU">
+ 
+ <THREAD NUM="1">		
+  <TESTITEM>
+	   <ITEM_NAME>ATF_MTDL_START_ATF_MTDL_START</ITEM_NAME>         
+	   <BATCH_FILE>D:\BURNIN\NEWMTDL\AFT_MTDL_START\AFT_MTDL_START.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>SecureBootCheck_SecureBootCheck</ITEM_NAME>          
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\SecureBoot_Check.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+	<TESTITEM>
+	   <ITEM_NAME>Cài_đặt_khởi_động_lại_đổ_màn_hình_xanh_蓝屏dump重启设定</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\dump\dump.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+       <ITEM_NAME>Cài_đặt_WSMT_WSMT设置</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\WSMT\SETWSMT.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\bios_BR.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+       <ITEM_NAME>BiosDefault_BiosDefault</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\LoadDefault.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_lệnh_làm_việc_chặn_Block工单检查</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\BlockBuild\BlockBuild.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\BlockBuild.jpg</PICTURE_FILE>
+	</TESTITEM>
+	 	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_PPID_PPID检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\Write_SVC_PPID.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_SVC_PPID.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	 <TESTITEM>
+	   <ITEM_NAME>CheckIN_CheckIN</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckIN.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_SVC_PPID.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_thông_tin_CPU_CPU信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckCPU\CheckCPU.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckCPU.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_tần_số_CPU_CPU频率检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckCPU\CurrentClockSpeed.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckCPU.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+       <ITEM_NAME>Kiểm_tra_thông_tin_HDD_HDD信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckHDD\CheckHDD.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckHDD.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_thông_tin_DIMM_DIMM信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckDIMM\CheckDIMM.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckDIMM.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_tần_số_DIMM_DIMM频率检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckDIMM\CheckDIMM_Speed.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckDIMM.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_thông_tin_MB_MB信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckMB\CheckMB.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckMB.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Tai_nghe_Headset</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\AudioLoop\SetHeadset.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kết_nối_với_mạng_không_dây_连接无线网络</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\LinkAP\LinkAP.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LinkAP.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+		<ITEM_NAME>Xác_thực_WDL_Safe_2_WDL_Safe认证2</ITEM_NAME>               
+		<BATCH_FILE>D:\FA_PRO\SAFE\WDLSAFE.bat</BATCH_FILE>
+		<PICTURE_FILE>D:\TEST_UI\Picture_UI\Safe.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+	<TESTITEM>
+	   <ITEM_NAME>Đặt_chế_độ_gốc_2_设置工厂模式2</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\Setmode\Setmode.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Setmode.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+		<ITEM_NAME>Xóa_kết_quả_kiểm_tra_tự_động_清除自动化测试结果</ITEM_NAME>               
+		<BATCH_FILE>D:\FA_PRO\LED_Test\ClearResult.bat</BATCH_FILE>
+		<PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+	<TESTITEM>
+		<ITEM_NAME>Xóa_kết_quả_kiểm_tra_SFCS_清除SFCS测试结果</ITEM_NAME>               
+		<BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\ClearTestResult.bat</BATCH_FILE>
+		<PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Chuẩn_bị_thông_tin_trạm_TU_准备TU过站信息</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\SFCS_XX\SFCS_TU.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\SFCS.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	</THREAD>
+
+</STATION>
+
+<STATION ID="TS"> 
+	
+ <THREAD NUM="1">
+	<TESTITEM>
+       <ITEM_NAME>Ngắt_kết_nối_mạng_không_dây_断开无线网连接</ITEM_NAME>           
+       <BATCH_FILE>D:\FA_PRO\BaseXML\LeaveAP\LeaveAP.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LeaveAP.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>UpdateECfor3dmarkautorestart</ITEM_NAME>         
+	   <BATCH_FILE>D:\BURnin\UpdateBIOS\Update_EC.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Update_BIOS.jpg</PICTURE_FILE>
+ 	</TESTITEM>	
+	<TESTITEM>
+	  <ITEM_NAME>Nhận_độ_phân_giải_L_CD_获取LCD分辨率</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\TouchPanel\GetLCDResolution.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg </PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>checkASPM_checkASPM</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\checkASPM.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_SVC_PPID.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	   <ITEM_NAME>Khởi_động_lại_máy_重启机台</ITEM_NAME>          
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\WDL_Initialize.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	   <ITEM_NAME>Bật_chế_độ_DFMM_开启DFMM模式</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\Setmode\Enabled_DFMM.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Setmode.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_thông_tin_cáp_Cable信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CableCheck\CheckCables.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	   <ITEM_NAME>Sạc_WDL_WDL充电</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\CHARGE\WDL_Charge.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\WDL_Charge.jpg</PICTURE_FILE>
+	</TESTITEM>	
+
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_vỏ_hộp_盒盖测试</ITEM_NAME>
+	  <BATCH_FILE>D:\FA_PRO\Covertest\Check_Lid_Power_On.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Covertest.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+    <TESTITEM>
+	  <ITEM_NAME>Nhiễu_SPK_và_Gợn_nước_LCD_SPK杂音和LCD水波纹</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\LCDWater\LCDGarbage.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LCDGarbage.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+    <TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_bằng_tay_FANnoise_手测FANnoise</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\FANnoise\FANNOISE.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\fannoise.jpg</PICTURE_FILE>
+	</TESTITEM>		
+			
+	<TESTITEM>
+	   <ITEM_NAME>ADTnoies_ADTnoies</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\ADTnoise\ADTNOISE.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\ADTnoise.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_rò_rỉ_ánh_sáng_LCD_LCD漏光测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\Lcd\LCD.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LCDCheck.JPG</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Lsensor_Lsensor</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\LSensor\LSensorTest.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+		
+	<TESTITEM>
+	   <ITEM_NAME>lightSensorcheck_lightSensorcheck</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\LightCheck\LightSensor.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Lattice_TEST_Lattice_TEST</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\Synaptics\Synaptics.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\CVF_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>		
+	
+	<TESTITEM>
+	  <ITEM_NAME>IRCAMERA_IRCAMERA</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\IRCAMERA\IRCAM.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\IRCAMERA.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Disable_TouchPanel</ITEM_NAME>
+	   <BATCH_FILE>D:\FA_PRO\Disable_touchscreen\disable.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Link_net.jpg</PICTURE_FILE>
+	</TESTITEM> 
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_TPHaptic_TPHaptic测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\TouchPad\API\API6Pointtest.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\DEFO.JPG</PICTURE_FILE>
+	</TESTITEM>
+	
+    <TESTITEM>
+	   <ITEM_NAME>ChooseIO_ChooseIO</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\IOTEST\LinkIO\ChooseIO.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LinkIO.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_nhóm_đèn_LED_đầu_tiên_第一组LED灯测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\LED_Test\FirstLEDTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_nhóm_đèn_LED_thứ_hai_第二组LED灯测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\LED_Test\SecondLEDTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_nhóm_đèn_LED_thứ_ba_第三组LED灯测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\LED_Test\ThirdLEDTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>	
+
+	<TESTITEM>
+	  <ITEM_NAME>ShowSN_QRCode_ShowSN_QRCode</ITEM_NAME>         
+	  <BATCH_FILE>D:\FA_PRO\LED_Auto\QRCode\ShowBlackSN_KBTP.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_TP_TP测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\TouchPad\AitoELANTestRoutines\TouchPad_IO.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\DEFO.JPG</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>CloseSN_QRCode_CloseSN_QRCode</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\LED_Auto\LED_endKB.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>
+		
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_WaititemKB_đã_hoàn_tất_WaititemKB复测</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread2_Kiểm_tra_bàn_phím_键盘测试.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>	
+
+	<TESTITEM>
+	   <ITEM_NAME>Enable_TouchPanel</ITEM_NAME>
+	   <BATCH_FILE>D:\FA_PRO\Disable_touchscreen\enable.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Link_net.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_màn_hình_cảm_ứng_触屏测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\TouchPanel\TouchPanelHalf.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\TouchPanel.jpg </PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_tự_động_viền_đen_LCD_LCD黑边自动测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\AutoBlackSiteTest\AutoBlackSiteTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LCDCheck.JPG</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_LCDDRGB_LCDRGB测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\RGBAuto\RGBAuto_New.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kết_nối_IO_连接IO</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\IOTEST\LinkIO\LinkIO.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LinkIO.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_IO_IO测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\IOTEST\IOTEST.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\IOTEST.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Ngắt_kết_nối_IO_断开IO</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\IOTEST\LinkIO\LeaveIO.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LeaveIO.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_lại_Left1_TYPEC_Left1_TYPEC复测</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\PHIYO2605\Typec1_ReTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\TYPECTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_lại_Left2_TYPEC_Left2_TYPEC复测</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\PHIYO2605\Typec2_ReTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\TYPECTest.jpg</PICTURE_FILE>
+	</TESTITEM>		
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_lại_AUDIOLOOP_AUDIOLOOP复测</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\AUDIOLOOP\IOAUDIOLOOP_ReTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_lại_Right_t1_TYPEC_Right1_TYPEC复测</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\PHIYO2605\Typec3_ReTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\TYPECTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+    <TESTITEM>
+	  <ITEM_NAME>CheckACPower_CheckACPower</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\CHARGE\CheckACPower.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>CloseSN_QRCode1_CloseSN_QRCode1</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\LED_Auto\LED_end.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	<TESTITEM>
+	   <ITEM_NAME>WaititemGet_kết_quả_kiểm_tra_đèn_LED_Waititem获取LED灯测试结果</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread2_Get_SFCS_Log.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_lại_Common_PlayNoiseResult_Common_PlayNoiseResult复测</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Common_PlayNoiseResult\Common_PlayNoiseResult.py</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_lại_kênh_trái_1_dưới_bên_trái_左声道测试1左下</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Audio\Music\LeftAud1.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LeftAud.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_kênh_trái_2_trên_bên_trái_左声道测试2左上</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Audio\Music\LeftAud2.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LeftAud.jpg</PICTURE_FILE>
+	</TESTITEM>
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_kênh_phải_1_dưới_bên_phải_右声道测试1右下</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Audio\Music\RightAud1.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\RightAud.jpg</PICTURE_FILE>
+	</TESTITEM>
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_kênh_phải_2_góc_trên_bên_phải_右声道测试2右上</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Audio\Music\RightAud2.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\RightAud.jpg</PICTURE_FILE>
+	</TESTITEM>	
+    
+		
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_ghi_âm_micrô_麦克风录音测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Audio\MIC\MICNEW.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\AudioMIC.jpg</PICTURE_FILE>
+	</TESTITEM>
+	<TESTITEM>
+	  <ITEM_NAME>Phiyo1605_1</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\PhiYoTypeC\PhiYoTypeC1.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\TYPE_C_AB.jpg</PICTURE_FILE>
+	</TESTITEM>		
+
+	<TESTITEM>
+	  <ITEM_NAME>Phiyo1605_2</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\PhiYoTypeC\PhiYoTypeC2.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\TYPE_C_AB.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>Phiyo1605_3</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\PhiYoTypeC\PhiYoTypeC3.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\TYPE_C_AB.jpg</PICTURE_FILE>
+	</TESTITEM>	
+		
+	
+	<TESTITEM>
+	  <ITEM_NAME>DockingPort1_DockingPort1</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\TypeC_HDMI\Docking1_Test.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+		
+	<TESTITEM>
+	  <ITEM_NAME>DockingPort2_DockingPort2</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\TypeC_HDMI\Docking2_Test.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+		
+	<TESTITEM>
+	  <ITEM_NAME>DockingPort3_DockingPort3</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\TypeC_HDMI\Docking3_Test.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+    <TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_lại_kết_nối_Docking复测</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\TypeC_HDMI\Docking_Retest.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_WaititemTS2_đã_hoàn_tất_WaititemTS2测试完成</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread2End.log</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_WaititemTS3_đã_hoàn_tất_WaititemTS3测试完成</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread3End.log</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Tắt_chế_độ_DFMM_关闭DFMM模式</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\Setmode\Disabled_DFMM.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Setmode.jpg</PICTURE_FILE>
+	</TESTITEM>
+				
+    <TESTITEM>
+	   <ITEM_NAME>ATF_MTDL_END_ATF_MTDL_END</ITEM_NAME>         
+	   <BATCH_FILE>D:\BURNIN\NEWMTDL\AFT_MTDL_START\AFT_MTDL_END.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	   <ITEM_NAME>ClosePowerOnLid_ClosePowerOnLid</ITEM_NAME>
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\ClosePowerOnLid.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\TO_Update.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	   <ITEM_NAME>Check_markteingname_Check_markteingname</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckMarketingName.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\GetSfcsInfo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_máy_Fan_Noise_机测Fan_Noise</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\FAN_NOISE\FanNoise_Test.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+    <TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_TS_đã_hoàn_tất_TS测试complete</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Shutdown\Shutdown.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+       <ITEM_NAME>Ngắt_kết_nối_mạng_không_dây_断开无线网</ITEM_NAME>           
+       <BATCH_FILE>D:\FA_PRO\TSLinkAP\TSLeaveAP.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LeaveAP.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>DisSecureBo_ot_DisSecureBoot</ITEM_NAME>          
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\DISableSecureBoot.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM> 
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kết_nối_với_mạng_连接网络</ITEM_NAME>
+	   <BATCH_FILE>D:\BURNIN\Link\Link_net.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Link_net.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_thông_tin_trạm_TS_检查TS站别信息</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckTS.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Chuẩn_bị_thông_tin_trạm_TS_准备TS过站信息</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\SFCS_XX\SFCS_TS.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\SFCS.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+   </THREAD>
+  <THREAD NUM="2">
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_WaititemKB_đã_hoàn_tất_WaititemKB复测</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread1_KIỂM_TRA_NHÓM_ĐÈN_LED_THỨ_BA_第三组LED灯测试.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_bàn_phím_键盘测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\Keyboard_NEW\KB_Test.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\KBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>WaititemChooseIO_đã_hoàn_tất_WaititemChooseIO完成</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread1_Ngắt_kết_nối_IO_断开IO.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Get_SFCS_Log</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\GetSfcsLog\GetSfcsLog.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Link_net.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Get_RGB_LOG</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\RGBAuto\Get_RGB_LOG.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Link_net.jpg</PICTURE_FILE>
+	</TESTITEM>	
+    
+
+	<TESTITEM>
+		<ITEM_NAME>Check_InfopartLOG_Check_InfopartLOG</ITEM_NAME>               
+		<BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CHECKInfopart.bat</BATCH_FILE>
+		<PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_lại_LCDRGB_LCDRGB复测</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\LCD\RGB_ReTest.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_lại_KB_KB复测</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\Keyboard_NEW\KB_ReTest.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\KBTest.jpg</PICTURE_FILE>
+	</TESTITEM>	
+
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_lai_TP_TP测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\TouchPad\AitoELANTestRoutines\TouchPad.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\DEFO.JPG</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>ServiceTagCheck_ServiceTagCheck</ITEM_NAME> 
+	   <BATCH_FILE>D:\FA_PRO\CheckSVC\CheckSN.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckSVC.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_lại_màn_hình_cảm_ứng_LCD_LCD触屏复测</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\TouchPanel\TouchP_ReTest.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>	
+
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_lại_AllLED_Retest</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\LED_Test\AllLED_Retest.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>
+    
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_AutoLCDLight_AutoLCDLight测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\LCD\LCDLight\AutoLCDLightTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_lại_độ_sáng_LCD_LCD明暗度复测</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\LCD\LCDLight\LCDLightRetest.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+		
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_bộ_chia_WLAN_WLAN分频器測試</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\WLAN\WlanTest.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\WlanTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	
+	</THREAD>
+   
+  <THREAD NUM="3">
+
+	<TESTITEM>
+	  <ITEM_NAME>Nắp_hộp_Waititem_kiểm_tra_Waititem盒盖测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\TEST_UI\log\TSThread1_Kiểm_tra_vỏ_hộp_盒盖测试.OK</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_chức_năng_vân_tay_指纹功能测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\FingerPrint\FingerPrint.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\FingerPrint.jpg </PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>SensorISH_SensorISH</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\FFS\SenSorISH.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\DEFO.JPG</PICTURE_FILE>
+	</TESTITEM>
+
+
+	
+	<TESTITEM>
+	   <ITEM_NAME>Waititem_Kiểm_tra_nhóm_đèn_LED_thứ_ba_第三组LED灯测试</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread1_Kiểm_tra_nhóm_đèn_LED_thứ_ba_第三组LED灯测试.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>	
+
+	<TESTITEM>
+	   <ITEM_NAME>WaitkillTPKB</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\rgbauto\killtpkbbegin_ver2.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+
+	<TESTITEM>
+	   <ITEM_NAME>WaititemChooseIO_đã_hoàn_tất_WaititemChooseIO完成</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread1_Ngắt_kết_nối_IO_断开IO.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_camera_摄像头测试</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\FaceCamera\FaceCamera.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\FaceCamera.jpg</PICTURE_FILE>
+	</TESTITEM>
+		
+	<TESTITEM>
+	  <ITEM_NAME>Kiểm_tra_xả_放电测试</ITEM_NAME>         
+	  <BATCH_FILE>D:\FA_PRO\DisCharge\DisCharge.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\DisCharge.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_công_tắc_chống_trộm_防盜開關检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\INSWITCH\IntruSW.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\IntruSW.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+  </THREAD>
+  
+<THREAD NUM="4">
+
+	<TESTITEM>
+	   <ITEM_NAME>WaititemChooseIO_đã_hoàn_tất_WaititemChooseIO完成</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread1_ChooseIO_ChooseIO.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>LoadSpeaker_LoadSpeaker</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Audio\INMIC\INTMIC.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Audio.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>Ghi_âm_bằng_micrô_麦克风录音</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Audio\MIC\MICN2.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Audio.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+  </THREAD>
+  
+  
+ </STATION>
+  <STATION ID="BASETO"> 
+	<THREAD NUM="1">
+     
+	<TESTITEM>
+	   <ITEM_NAME>Kết_nối_với_mạng_连接网络</ITEM_NAME>
+	   <BATCH_FILE>D:\BURNIN\Link\Link_net.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Link_net.jpg</PICTURE_FILE>
+	</TESTITEM> 
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_thông_tin_trạm_TO_检查TO站别信息</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckTO.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Chạy_chương_trình_kiểm_tra_cập_nhật_Runin更新测试程式</ITEM_NAME>
+	   <BATCH_FILE>D:\BURNIN\Update\TO_Update.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\TO_Update.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Kiểm_tra_thông_tin_trạm_TO_检查TO站别信息</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckTO.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>		
+
+   </THREAD> 
+
+ </STATION>
+
+</TESTINFO>

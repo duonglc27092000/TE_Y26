@@ -1,0 +1,202 @@
+12:52 PM 2/19/2026
+
+=>>chuyển những VNS đang dùng trước kia sang 10.69.230.82\backup_file
+ 
+__________________________VNS__________________________
+
+1.AR15MLK_MTL_20250417.vns --done
+
+2.Quake_L_RPL_250709WVN_0227.vns --done
+
+3.QuakeN1416_20240523.vns --???
+
+4.QuakePlus20230317_WVN.vns
+
+5.Arches15_RPL20242105.vns
+
+6.AR13RPL20240417.vns
+
+7.OASIS20230213_WVN.vns
+
+8.OASIS13MLK_MTL_03052025.vns
+
+9.OASIS13MLKRPL_20250120.vns
+
+10.Pls_N1416_UMA_20231117.vns
+
+11.Arches13MLK_MTL_20252803.vns
+
+12.Arches13MLK_RPL_20251703.vns
+
+13.Arches15MLK_RPL_20252903.vns
+
+14.QKL_MLK_MTL_250115.vns
+
+15.QKL_MLK_RPL_250115.vns
+
+16.DiabloMTL_250212.vns
+
+17.TarokoLNL20250715.vns
+
+18.TarokoARL20250714.vns
+
+19.GR_ARL_DIS_251104.vns
+
+20.TarokoRPL_20250303.vns
+
+21.Scorpio_MTL_20250121.vns
+
+22.SentryNVRPL_20250708WVN.vns
+
+23.SentryAMD_250709WVN_0304.vns
+
+24.JarvisLNL_250627WVN.gob
+
+25.ArwingRPL_0613_WVN_ver2.vns
+
+26.TarokoAmd_20251612.vns
+
+27.jade_amd_20250909.vns
+
+28.JadeARL_0423_WVN_ver02.vns
+
+29.JarvisAMD_250702WVN.vns
+
+30.ArwingARL_20250509WVNv2.vns
+
+31.JADE_RPL_SSD_11072015.vns
+
+32.DiabloARL_20250609_wvn.vns
+
+33.GRAMDXB0619_wvn.vns
+
+34.JadeARL_USH_0614_wvn.vns
+
+35.sentrNBN_wvn.vns
+
+36.SentryMLK_0925WVN.vns --pilot run
+
+37.SentryMLK_0925WVN.vns 
+
+38.SentryN14_SE_20250814_WVNV1.vns
+
+39.HP_PTL_A01_20260109.vns --pilotrun
+
+40.Sentry_ARL_A01_20260114.vns
+
+41.GR14MLKDVT2FA1219_WVN.vns --pilotrun
+
+42.GR16MLKDVT2FA1219_WVN.vns  --pilotrun
+
+43.Arwing_MLK_1204_WVN.vns  --pilotrun
+
+44.FirebatAMD_DVT1_0120_WVN.vns --pilotrun
+
+_______________________________________________________
+
+_________________________VNS delete ______________________________
+
+
+1.AR15MLK_MTL_20250404.vns --ok
+
+2.AR15MLK_MTL_20252803.vns --ok
+
+3.AR15RPL20240928.vns --ok
+
+4.AR15RPL20241007.vns --ok
+
+5.Arches13MLK_MTL_20250412.vns --ok
+
+6.AR15_MLK_MTL_20250510.vns --OK
+
+7.Arches15MLK_RPL_20251703.vns --OK
+
+8.AR13RPL20241007.vns --OK
+
+9.JADE_AMD_20252203.vns --OK
+
+10.JADE_AMD_27062025.vns --OK
+
+11.JadeAMD_20250326_wvn.vns --OK
+
+12.ArwingARL_20250509WVN.vns --OK
+
+13.Arches13MLK_MTL_20251703.vns --ok
+
+14.ArwingARL_B2_0414_wvn.vns --ok
+
+15.ArwingRPL_20250613WVN.vns --ok
+
+16.ArwingRPL_B2_0414_wvn.vns --ok
+
+17.Diablo_MTL_0229.vns --ok
+
+18.Diablo_MTL20250120.vns --ok
+
+19.DiabloARL_20250609.vns --ok
+
+20.DIABLOMTL0707.vns --ok
+
+21.GHOST_RIDER_1416_ARL_U_20250411.vns --ok
+
+22.GHOST_RIDER_20250228_WVN.vns --ok
+
+23.Ghostrider20250513_WVN.vns --ok
+
+24.Ghostrider20250513_WVN0206.vns --ok
+
+25.GhostRiderDSC05072025.vns --ok
+
+26.TR_LNL_XB_131224_WVN.vns --ok
+
+27.TR_LNL_XB_131224_WVNbackup.vns --ok
+
+28.TAROKO_LNL_06052025.vns --ok
+
+29.TAROKO_LNL_20250405.vns --ok
+
+30.Taroko_1316_LNL_021125.vns --ok
+
+31.TarokoARLDVT21206_wvn.vns --ok
+
+32.TarokoARL0416WVN.vns --ok
+
+33.TAROKO_ARL_29032025.vns --ok
+
+34.Taroko_ARL_20250402.vns --ok
+
+35.Taroko_ARL_20250228.vns --ok
+
+36.Taroko_ARL_20250227.vns --ok
+
+37.TarokoAMD0319_wvn.vns --ok
+
+38.TAROKO_ARL_04042025.vns -ok
+
+39.Taroko_AMD_20252103.vns --ok
+
+40.Taroko_AMD_20250419.vns --ok
+
+41.TRLNLARV_20250304.vns --ok
+
+42.TRLNLARV_20250405.vns --ok
+
+43.TAROKO_AMD_20251112.vns --ok
+
+44.
+
+45.
+
+46.
+
+47.
+
+48.
+
+49.
+
+50.
+
+51.
+
+52.

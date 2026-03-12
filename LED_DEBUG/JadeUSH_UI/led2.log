@@ -1,0 +1,2162 @@
+Tool Version : 2.5.47
+
+Available Attributes: 
+---------------------
+Password Attribute : 
+Name : AdminPassword
+Modifier : [RegEx:^\\133\\x20-\\x7e\\135{0,32}$]
+ReadOnly : False
+Display Name : Admin Password
+Help String : 
+Current Value : 
+
+Password Attribute : 
+Name : SystemPassword
+Modifier : [RegEx:^\\133\\x20-\\x7e\\135{0,32}$]
+ReadOnly : False
+Display Name : System Password
+Help String : 
+Current Value : 
+
+Password Attribute : 
+Name : OwnerPassword
+Modifier : [RegEx:^\\133\\x20-\\x7e\\135{0,32}$]
+ReadOnly : False
+Display Name : Owner Password
+Help String : 
+Current Value : 
+
+Enumeration Attribute : 
+Name : PxeBootPriority
+ReadOnly : False
+Display Name : Enable PXE Boot Priority
+Help String : When enabled, if a new PXE boot option is detected, it will be added to the top of the Boot Sequence.
+When forced, any PXE boot option will be on the top of the Boot Sequence; and any external PXE boot option(s) have the higher boot priority than any internal PXE boot option(s). OS installation will not change the PXE boot option priority.
+
+Possible Values : Disabled Enabled Forced 
+Possible Values (Display Name) : Disabled, Enabled, Forced
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : IPvXBootOrder
+Modifier : [SuppressIf:IPv4PXEBoot=Disabled][SuppressIf:IPv6PXEBoot=Disabled]
+ReadOnly : False
+Display Name : UEFI Network Boot Order
+Help String : This option is used to select the IPv4 and IPv6 option boot order.
+
+Possible Values : IPv4 IPv6 
+Possible Values (Display Name) : IPv4, IPv6
+Default Values : IPv4 
+Current Value : IPv4 
+
+Enumeration Attribute : 
+Name : AdvancedMode
+ReadOnly : False
+Display Name : BIOS Setup Advanced Mode
+Help String : Disabling BIOS Setup Advanced Mode will allow access to basic BIOS settings only.
+Enabling BIOS Setup Advanced Mode will make both basic BIOS settings and advanced BIOS settings visible.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : SecureBoot
+ReadOnly : False
+Display Name : Enable Secure Boot
+Help String : Secure Boot helps ensure your system boots using only validated boot software.
+When Secure Boot is activated, each piece of boot software is checked, including firmware drivers and the operating system. If the signatures are good, your system boots, and the firmware gives control to the operating system.
+For Secure Boot to be enabled, the system needs to be in UEFI boot mode.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : MSUefiCA
+Modifier : [ReadOnlyIf:SecureBoot=Disabled]
+ReadOnly : False
+Display Name : Enable Microsoft UEFI CA
+Help String : Enable Microsoft UEFI CA(Certificate Authority) will include the UEFI CA in the BIOS UEFI Secure Boot DB database.
+When disabled, the Microsoft UEFI CA is removed from the BIOS UEFI Secure Boot DB database.
+Disabling the Microsoft UEFI CA could render your system unable to boot. System graphics may not function. Some devices may not function properly. The system could become unrecoverable.
+Allow Pre-Boot Modules Only will use the Microsoft UEFI CA to verify the authenticity of option ROMs used for add-in cards. 
+
+Possible Values : Enabled Hybrid Disabled 
+Possible Values (Display Name) : Enabled, Allow Pre-boot Modules Only, Disabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : SecureBootMode
+ReadOnly : False
+Display Name : Secure Boot Mode
+Help String : Changes to the Secure Boot operation mode modifies the behavior of Secure Boot to allow evaluation or enforcement of UEFI driver signatures. Deployed Mode should be selected for normal operation of Secure Boot.
+Deployed Mode - Checks the integrity of UEFI drivers and bootloaders before allowing execution. Use this mode for full Secure Boot protections.
+Audit Mode - Performs a signature check but does not block execution of all UEFI drivers and bootloaders.  Use this mode when making modifications to Secure Boot Keys.
+Possible Values : DeployedMode AuditMode 
+Possible Values (Display Name) : Deployed Mode, Audit Mode
+Default Values : DeployedMode 
+Current Value : DeployedMode 
+
+BIOS Collection : 
+Name : BootConfiguration
+ReadOnly : True
+Display Name : Boot Configuration
+Help String : 
+Collection Name : BootConfiguration
+Attribute Count : 6
+Attributes are : 
+		PxeBootPriority		IPvXBootOrder		AdvancedMode
+		SecureBoot		MSUefiCA		SecureBootMode
+
+Enumeration Attribute : 
+Name : Camera
+ReadOnly : False
+Display Name : Enable Camera
+Help String : Click the checkbox to enable the Camera.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : IntegratedAudio
+ReadOnly : False
+Display Name : Enable Audio
+Help String : Use this setting to switch all integrated audio On/Off, or enable/disable the microphone and the internal speaker separately.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : Microphone
+ReadOnly : False
+Display Name : Enable Microphone
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : InternalSpeaker
+ReadOnly : False
+Display Name : Enable Internal Speaker
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : UsbPortsExternal
+ReadOnly : False
+Display Name : Enable External USB Ports
+Help String :  
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : UsbEmu
+ReadOnly : False
+Display Name : Enable USB Boot Support
+Help String :  
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : ThunderboltPorts
+ReadOnly : False
+Display Name : Enable Thunderbolt" Technology Support
+Help String : When enabled, the Thunderbolt" Technology feature, and associated ports and adapters are enabled.
+When disabled, the Thunderbolt" Technology feature is disabled, and any connected Thunderbolt" adapter devices are not available in pre-boot or within the operating system.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : ThunderboltBoot
+Modifier : [ReadOnlyIf:ThunderboltPorts=Disabled]
+ReadOnly : False
+Display Name : Enable Thunderbolt" Boot Support
+Help String : When enabled, the following Thunderbolt" adapter features are enabled during Pre-boot:  Thunderbolt" adapter boot support, USB device on Thunderbolt" adapter support (including USB boot support). This allows Thunderbolt" adapter peripheral devices and USB devices connected to the Thunderbolt" adapter to be used during BIOS pre-boot. However, setting this to "Enabled" will override the Security Levels utilized within the operating system. When this setting is enabled, any Thunderbolt" adapter peripherals and USB devices connected to theThunderbolt" adapter port prior to booting the system can be used in pre-boot. As long as the device remains connected, it will continue to function within the operating system, regardless of the Security Level set in BIOS. 
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : DisUsb4Pcie
+ReadOnly : False
+Display Name : Disable USB4 PCIE Tunneling
+Help String : Disabling USB4 PCIe tunneling may cause the TBT controller to show an error and may cause TBT devices to not function.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : VideoPowerOnlyPorts
+ReadOnly : False
+Display Name : Video/Power only on Type-C Ports
+Help String : Limits Type-C port functionality to Video or Power only
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : TypeCDockOverride
+ReadOnly : False
+Display Name : Type-C Dock Override
+Help String : This field always allows user to use connected Type-C Dell Dock to provide data stream when keeping the External USB Ports disabled. When Type-C Dock Override gets enabled, it activates Audio/Lan submenu.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : TypeCDockAudio
+ReadOnly : False
+Display Name : Type C Dock Audio
+Help String : This field always allows user to use Audio on Dell Dock external ports.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : TypeCDockLan
+ReadOnly : False
+Display Name : Type C Dock Lan
+Help String : This field always allows user to use LAN on Dell Dock external ports.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : FingerprintReader
+ReadOnly : False
+Display Name : Enable Fingerprint Reader Device
+Help String : Enable or disable the Fingerprint Reader Device.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : UnobtrusiveMode
+ReadOnly : False
+Display Name : Enable Unobtrusive Mode
+Help String : When the feature is enabled, this option will turn off all system light and sound.Toggling <Fn>+<Shift>+<B> enters and exits unobtrusive mode.If this option is grayed out and needs to be enabled, please ensure Collaboration Touchpad (Go to Pre-boot Behavior) is disabled first. Then turn on the below switch.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : DustFilter
+ReadOnly : False
+Display Name : Dust Filter Maintenance
+Help String : This field enables or disables BIOS messages for maintaining  the optional dust filter
+installed in your computer. BIOS will generate a pre-boot reminder to clean or replace
+the dust filter based on the interval set.
+
+Possible Values : Disabled 15days 30days 60days 90days 120days 150days 180days 
+Possible Values (Display Name) : Disabled, 15 days, 30 days, 60 days, 90 days, 120 days, 150 days, 180 days
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : MicMuteLed
+ReadOnly : False
+Display Name : Microphone Mute Led
+Help String : This setting will indicate LED status of Microphone.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : DellCoreService
+ReadOnly : False
+Display Name : DellCoreService
+Help String : This Token/Attribute controls boot time creation of an SSDT ACPI Virtual Device Table
+Enabled:  Creates SSDT Table at boot time
+Disabled:   No SSDT Table is created.  (Default State).
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : TelemetryAccessLvl
+ReadOnly : False
+Display Name : Telemetry Access Level
+Help String : This is BIOSIQ telemetry access control variable which controls the type of telemetry data that comes from BIOS
+Possible Values : Disabled Basic Enhanced Full 
+Possible Values (Display Name) : Disabled, Basic, Enhanced, Full
+Default Values : Full 
+Current Value : Full 
+
+BIOS Collection : 
+Name : IntegratedDevices
+ReadOnly : True
+Display Name : Integrated Devices
+Help String : 
+Collection Name : IntegratedDevices
+Attribute Count : 19
+Attributes are : 
+		Camera		IntegratedAudio		Microphone
+		InternalSpeaker		UsbPortsExternal		UsbEmu
+		ThunderboltPorts		ThunderboltBoot		DisUsb4Pcie
+		VideoPowerOnlyPorts		TypeCDockOverride		TypeCDockAudio
+		TypeCDockLan		FingerprintReader		UnobtrusiveMode
+		DustFilter		MicMuteLed		DellCoreService
+		TelemetryAccessLvl
+Enumeration Attribute : 
+Name : EmbSataRaid
+ReadOnly : False
+Display Name : SATA/NVMe Operation
+Help String : Set the operating mode of the integrated storage device controller.
+
+Possible Values : Disabled Ahci Raid 
+Possible Values (Display Name) : Disabled, AHCI/NVMe, RAID On
+Default Values : Raid 
+Current Value : Raid 
+
+Enumeration Attribute : 
+Name : M2PcieSsd0
+ReadOnly : False
+Display Name : M.2 PCIe SSD-0
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : SmartErrors
+ReadOnly : False
+Display Name : Enable SMART Reporting
+Help String : If S.M.A.R.T (Self-Monitoring, Analysis, and Reporting Technology) is enabled, the BIOS can receive analytical information from integrated drives and send notifications during startup about possible future failure of the hard drive. 
+If SMART Reporting is enabled, hard drive errors for integrated drives will be reported during system startup. 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+BIOS Collection : 
+Name : Storage
+ReadOnly : True
+Display Name : Storage
+Help String : 
+Collection Name : Storage
+Attribute Count : 3
+Attributes are : 
+		EmbSataRaid		M2PcieSsd0		SmartErrors
+
+Integer Attribute : 
+Name : BrightnessBattery
+ReadOnly : False
+Display Name : Brightness on battery power
+Help String : Set the screen brightness when running on battery power:
+
+Current Value : 5
+Lower Bound : 0
+Upper Bound : 10
+Scalar Increment : 1
+
+Integer Attribute : 
+Name : BrightnessAc
+ReadOnly : False
+Display Name : Brightness on AC power
+Help String : Set the screen brightness when running on AC power:
+
+Current Value : 10
+Lower Bound : 0
+Upper Bound : 10
+Scalar Increment : 1
+
+Enumeration Attribute : 
+Name : FullScreenLogo
+Modifier : [ReadOnlyIfNot:LogoType=CustomLogo]
+ReadOnly : False
+Display Name : Full Screen Logo
+Help String : This option will display full screen logo if your image match screen resolution.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+BIOS Collection : 
+Name : Display
+ReadOnly : True
+Display Name : Display
+Help String : 
+Collection Name : Display
+Attribute Count : 3
+Attributes are : 
+		BrightnessBattery		BrightnessAc		FullScreenLogo
+
+Enumeration Attribute : 
+Name : EmbNic1
+ReadOnly : False
+Display Name : Integrated NIC
+Help String : This option controls the on-board LAN Controller.
+
+Possible Values : Disabled Enabled EnabledPxe 
+Possible Values (Display Name) : Disabled, Enabled, Enabled with PXE
+Default Values : EnabledPxe 
+Current Value : EnabledPxe 
+
+Enumeration Attribute : 
+Name : WirelessLan
+ReadOnly : False
+Display Name : WLAN
+Help String : These fields allow enabling/disabling of internal WLAN device.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : BluetoothDevice
+ReadOnly : False
+Display Name : Bluetooth
+Help String : These fields allow enabling/disabling of internal Bluetooth® device.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : UefiNwStack
+ReadOnly : False
+Display Name : Enable UEFI Network Stack
+Help String : If enabled, UEFI networking protocols are installed and available, allowing pre-OS and early OS networking features to use any enabled NICs.
+Possible Values : Disabled SelEnabled AutoEnabled Enabled 
+Possible Values (Display Name) : Disabled, Selective Enabled, Auto Enabled, Enabled
+Default Values : AutoEnabled 
+Current Value : AutoEnabled 
+
+Enumeration Attribute : 
+Name : IPv4PXEBoot
+ReadOnly : False
+Display Name : IPv4 PXE Boot
+Help String : When enabled, IPv4 PXE Boot option is available. When disabled, IPv4 PXE Boot option is not available.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : IPv6PXEBoot
+ReadOnly : False
+Display Name : IPv6 PXE Boot
+Help String : When enabled, IPv6 PXE Boot option is available. When disabled, IPv6 PXE Boot option is not available.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : WlanAutoSense
+ReadOnly : False
+Display Name : Control WLAN radio
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : HttpsBoot
+ReadOnly : False
+Display Name : HTTP(s) Boot
+Help String : This platform has HTTP(s) Boot capabilities.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : HttpsBootMode
+ReadOnly : False
+Display Name : HTTP(s) Boot Modes
+Help String : 
+Possible Values : AutoMode ManualMode 
+Possible Values (Display Name) : Auto Mode, Manual Mode
+Default Values : AutoMode 
+Current Value : AutoMode 
+
+BIOS Collection : 
+Name : Connection
+ReadOnly : True
+Display Name : Connection
+Help String : 
+Collection Name : Connection
+Attribute Count : 9
+Attributes are : 
+		EmbNic1		WirelessLan		BluetoothDevice
+		UefiNwStack		IPv4PXEBoot		IPv6PXEBoot
+		WlanAutoSense		HttpsBoot		HttpsBootMode
+
+Enumeration Attribute : 
+Name : PrimaryBattChargeCfg
+ReadOnly : False
+Display Name : Battery Configuration
+Help String : When enabled, this functionality allows the system to run on battery during peak power usage hours. Use the table below to prevent AC power usage between certain times of each day.
+Possible Values : Adaptive Standard Express PrimAcUse Custom 
+Possible Values (Display Name) : Adaptive, Standard, ExpressCharge", Primarily AC Use, Custom
+Default Values : Adaptive 
+Current Value : Adaptive 
+
+Integer Attribute : 
+Name : CustomChargeStart
+Modifier : [ReadOnlyIfNot:PrimaryBattChargeCfg=Custom]
+ReadOnly : False
+Display Name : Custom Charge Start
+Help String :        
+Current Value : 50
+Lower Bound : 50
+Upper Bound : 95
+Scalar Increment : 1
+
+Integer Attribute : 
+Name : CustomChargeStop
+Modifier : [ReadOnlyIfNot:PrimaryBattChargeCfg=Custom]
+ReadOnly : False
+Display Name : Custom Charge Stop
+Help String :        
+Current Value : 90
+Lower Bound : 55
+Upper Bound : 100
+Scalar Increment : 1
+
+Enumeration Attribute : 
+Name : AdvBatteryChargeCfg
+ReadOnly : False
+Display Name : Enable Advanced Battery Charge Configuration
+Help String : Advanced Battery Charge maximizes battery health while still supporting heavy use during the work day. When enabled, the following takes place using the user set daily times and time periods:
+ - From 'Beginning of Day' and lasting for 'Work Period', ExpressCharge" is used for accelerated battery charging.
+ - At all other times Standard Charge is used for maximum battery health.
+ - Setting 'Work Period' to 0 disables this feature for that day.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : PeakShiftCfg
+ReadOnly : False
+Display Name : Enable Peak Shift
+Help String : When On, this functionality allows the system to run on battery during peak power usage hours. Use the table below to prevent AC power usage between certain times of each day.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Integer Attribute : 
+Name : PeakShiftBatteryThreshold
+Modifier : [SuppressIf:PeakShiftCfg=Disabled]
+ReadOnly : False
+Display Name : Battery Threshold [15% to 100%]
+Help String : When On, this functionality allows the system to run on battery during peak power usage hours. Use the table below to prevent AC power usage between certain times of each day.
+Current Value : 15
+Lower Bound : 15
+Upper Bound : 100
+Scalar Increment : 1
+
+Enumeration Attribute : 
+Name : TypeCPower
+ReadOnly : False
+Display Name : Type-C Connector Power
+Help String : This option lets you set the maximum power that can be drawn from the Type-C connector.
+Note: Setting a higher power value for the Type-C connector may cause the system to throttle sooner, if the total system power budget is exceeded. If power budget is exceeded, it will not damage your system or peripheral(s) but may cause your system to run more slowly.
+Possible Values : 7.5W 15W 
+Possible Values (Display Name) : 7.5 Watts, 15 Watts
+Default Values : 7.5W 
+Current Value : 7.5W 
+
+Enumeration Attribute : 
+Name : UsbPowerShare
+ReadOnly : False
+Display Name : Enable USB PowerShare
+Help String : When the system is in a sleep state, this option allows external devices (such as phones and portable music players)to be powered or charged using the stored system battery. Devices must be connected through the designated USB PowerShareport on the system. If disabled, devices will not charge when the system is off.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : ThermalManagement
+ReadOnly : False
+Display Name : Thermal Management
+Help String : This setting allows for cooling fan and processor heat management to adjust system performance, noise and temperature.
+
+Possible Values : Optimized Cool Quiet UltraPerformance 
+Possible Values (Display Name) : Optimized, Cool, Quiet, Ultra Performance
+Default Values : Optimized 
+Current Value : Optimized 
+
+Enumeration Attribute : 
+Name : WakeOnDock
+ReadOnly : False
+Display Name : Wake on Dell USB-C Dock
+Help String : When Wake on Dell USB-C Dock is enabled, connecting a Dell USB-C Dock will wake the system from Standby, Hibernate, or Power Off.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : BlockSleep
+ReadOnly : False
+Display Name : Block Sleep
+Help String : This option lets you to block entering Sleep (S3) mode in the operating system.Note: When Block Sleep is enabled, the system won't go to sleep, Intel Rapid Start will be disabled automatically, and the operating system power option will be blank if it was set to Sleep.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : LidSwitch
+ReadOnly : False
+Display Name : Enable Lid Switch
+Help String : This option allow to disable the lid switch
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : SpeedShift
+ReadOnly : False
+Display Name : Intel Speed Shift Technology
+Help String : This option is used to enable/disable Intel Speed Shift Technology support. Setting this option to enable allows the operating system to select the appropriate processor performance automatically.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : ForceLpmAspmOff
+ReadOnly : False
+Display Name : Force Lpm And Aspm Off
+Help String : Force SATA/USB low power mode and Active State Power Management (ASPM) Off in Manufacturing Mode.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+BIOS Collection : 
+Name : Power
+ReadOnly : True
+Display Name : Power
+Help String : 
+Collection Name : Power
+Attribute Count : 14
+Attributes are : 
+		PrimaryBattChargeCfg		CustomChargeStart		CustomChargeStop
+		AdvBatteryChargeCfg		PeakShiftCfg		PeakShiftBatteryThreshold
+		TypeCPower		UsbPowerShare		ThermalManagement
+		WakeOnDock		BlockSleep		LidSwitch
+		SpeedShift		ForceLpmAspmOff
+Enumeration Attribute : 
+Name : TpmSecurity
+ReadOnly : False
+Display Name : TPM 2.0 Security On
+Help String : Select whether or not the Trusted Platform Module (TPM) is visible to the OS.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : TpmClear
+Modifier : [SuppressIf:TpmSecurity=Disabled]
+ReadOnly : False
+Display Name : Clear
+Help String : This setting clears the TPM owner information, and returns the TPM to the default state.  Changes to this setting will be latched in BIOS after clicking "apply", but will not take effect in the TPM until after exiting the BIOS setup menu. 
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : TpmPpiClearOverride
+Modifier : [SuppressIf:TpmSecurity=Disabled]
+ReadOnly : False
+Display Name : PPI Bypass for Clear Commands
+Help String : This option controls the TPM Physical Presence Interface (PPI). When enabled, this setting will allow the OS to skip BIOS PPI user prompts when issuing the Clear command. When disabled, this setting will require user physical presence interaction to follow instruction from BIOS.
+ 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : IntelTME
+ReadOnly : False
+Display Name : Multi-Key Total Memory Encryption (Up to 16 keys)
+Help String : Total Memory Encryption(TME) is used to protect memory from physical attacks including freeze spray, probing DDR to read the cycles, and others. All of system memory is encrypted by the TME block attached to the memory controller. Up to 16 different encryption keys are supported for use by OS/VMM.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : ChasIntrusion
+ReadOnly : False
+Display Name : Chassis Intrusion
+Help String : This field controls the chassis intrusion feature.
+
+Possible Values : Disabled Enabled SilentEnable 
+Possible Values (Display Name) : Disabled, Enabled, On-Silent
+Default Values : Disabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : BlockBootUntilChasIntrusionClr
+Modifier : [ReadOnlyIfNot:ChasIntrusion=Enabled]
+ReadOnly : False
+Display Name : Block Boot Until Cleared
+Help String : When the "Block Boot Until Cleared" setting is enabled, you will not be able to boot until returning to this page to clear the warning. If an Admin Password is set, you will need to unlock Setup to clear the warning.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : SmmSecurityMitigation
+ReadOnly : False
+Display Name : SMM Security Mitigation
+Help String : This option enables or disables additional UEFI SMM Security Mitigation protections. The operating system can use this feature to help protect the secure environment created by virtualization based security.
+Enabling this feature provides additional UEFI SMM Security Mitigation protections. However, this feature may cause compatibility issues or loss of functionality with some legacy tools and applications.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : Absolute
+ReadOnly : False
+Display Name : Absolute
+Help String : This field lets you Enable, Disable or Permanently Disable the BIOS module interface of the optional Absolute Persistence Module service from Absolute® Software.
+
+Absolute®, formerly Absolute Computrace®, is a service designed to help track devices and provide recovery services in the event a device is lost or stolen. Once installed, the Absolute agent communicates with the Absolute Monitoring Center at programmed intervals to provide the tracking service. By installing the agent and activating the service, you consent to the transmission of information between your device and the Absolute Monitoring Center. For customers who have purchased the Absolute service, the firmware Persistence Module checks for the presence and health of Absolute on boot, and restores the functionality in case of agent removal or tampering.
+Absolute, Computrace and Persistence are registered trademarks of Absolute Software Corporation.
+
+Enabled               = Enable the Absolute Persistence and load the firmware Persistence Module.
+Disabled              = Disable Absolute Persistence. The firmware Persistence Module is not installed.
+Permanently Disabled  = Permanently disables Absolute Persistence module interface from farther use.
+
+Absolute Persistence cannot be disabled if the Absolute Monitoring service is activated. In order to disable the Absolute Persistence setting in BIOS Setup, first deactivate the Absolute Monitoring service.
+
+WARNING: The 'Permanently Disabled' option can only be selected once. When 'Permanently Disabled' is selected, Absolute Persistence cannot be re-enabled. No further changes to the Enable / Disable state are allowed.
+
+The Absolute® Anti-Theft solution is presently Enabled.
+
+NOTE: The Enable or Disable options will be unavailable while Computrace is in the activated state.
+Possible Values : EnableAbsolute DisableAbsolute PermanentlyDisabled 
+Possible Values (Display Name) : Enable Absolute, Disable Absolute, Permanently Disable Absolute
+Default Values : EnableAbsolute 
+Current Value : EnableAbsolute 
+
+Enumeration Attribute : 
+Name : AbsoluteActivate
+ReadOnly : False
+Display Name : Absolute Activate
+Help String : Absolute Activate
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : UefiBootPathSecurity
+ReadOnly : False
+Display Name : UEFI Boot Path Security
+Help String : Controls whether or not the system will prompt the user to enter the admin password (if set) when booting to a UEFI boot path device from the F12 boot menu.
+
+Possible Values : Never Always AlwaysExceptInternalHdd AlwaysExceptInternalHddPxe 
+Possible Values (Display Name) : Never, Always, Always Except Internal HDD, Always Except Internal HDD&PXE
+Default Values : AlwaysExceptInternalHdd 
+Current Value : AlwaysExceptInternalHdd 
+
+Enumeration Attribute : 
+Name : ABIState
+ReadOnly : False
+Display Name : Enable Authenticated BIOS Interface
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : ABIProvState
+ReadOnly : False
+Display Name : ABI Provision State
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : LegacyInterfaceAccess
+ReadOnly : False
+Display Name : Legacy Manageability Interface Access
+Help String : This setting allows the platform administrator to control access via the Legacy Manageability Interface when ABI is enabled and provisioned
+Enabled: The Legacy Manageability Interface can be used to read and change BIOS configuration settings
+Read-Only: BIOS configuration settings can be read, but cannot be changed through the Legacy Manageability Interface
+Disabled: The Legacy Manageability Interface is disabled. BIOS configuration reads and writes are only allowed through ABI
+
+
+Possible Values : Enabled ReadOnly Disabled 
+Possible Values (Display Name) : Enabled, Read-Only, Disabled
+Default Values : Enabled 
+Current Value : 
+
+Enumeration Attribute : 
+Name : KillTpm
+ReadOnly : False
+Display Name : Kill TPM
+Help String : This action removes discrete TPM and enables firmware TPM.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : FirmwareTamperDet
+ReadOnly : False
+Display Name : Firmware Device Tamper Detection
+Help String : This field controls the Firmware Device Tamper Detection feature.
+
+Possible Values : Disabled Enabled Silent 
+Possible Values (Display Name) : Disabled, Enabled, Silent
+Default Values : Silent 
+Current Value : Silent 
+
+BIOS Collection : 
+Name : Security
+ReadOnly : True
+Display Name : Security
+Help String : 
+Collection Name : Security
+Attribute Count : 15
+Attributes are : 
+		TpmSecurity		TpmClear		TpmPpiClearOverride
+		IntelTME		ChasIntrusion		BlockBootUntilChasIntrusionClr
+		SmmSecurityMitigation		Absolute		AbsoluteActivate
+		UefiBootPathSecurity		ABIState		ABIProvState
+		LegacyInterfaceAccess		KillTpm		FirmwareTamperDet
+
+Enumeration Attribute : 
+Name : StrongPassword
+ReadOnly : False
+Display Name : Enable Strong Passwords
+Help String : When enabled, this enforces stricter rules for admin and system passwords. They must be at least eight characters long and contain at least one upper case character and one lower case character. Enabling this feature automatically changes the default minimum password length to 8 characters. Disabling the "Strong Passwords" option after it was previously enabled will return the admin and system password minimum values to the default of 4.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : PwdUpperCaseRqd
+ReadOnly : False
+Display Name : Upper Case Letter
+Help String : When enabled, this field reinforces password must contain at least one upper case letter.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : PwdLowerCaseRqd
+ReadOnly : False
+Display Name : Lower Case Letter
+Help String : When enabled, this field reinforces password must contain at least one lower case letter.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : PwdDigitRqd
+ReadOnly : False
+Display Name : Digit
+Help String : When enabled, this field reinforces password must contain at least one digit number.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : PwdSpecialCharRqd
+ReadOnly : False
+Display Name : Special Character
+Help String : When enabled, this field reinforces password must contain at least one special character.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Integer Attribute : 
+Name : PwdMinLen
+ReadOnly : False
+Display Name : Minimum Characters
+Help String : This field controls the minimum number of characters allowed for password.
+Current Value : 4
+Lower Bound : 4
+Upper Bound : 32
+Scalar Increment : 1
+
+Enumeration Attribute : 
+Name : PasswordBypass
+ReadOnly : False
+Display Name : Password Bypass
+Help String : When enabled, this always prompts for system and internal hard drive passwords when powered on from the Off state.
+Possible Values : Disabled RebootBypass 
+Possible Values (Display Name) : Disabled, Reboot Bypass
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : PasswordLock
+ReadOnly : False
+Display Name : Allow Non-Admin Password Changes
+Help String : When On, user can change system and hard drive password without the need for admin password
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : AdminSetupLockout
+ReadOnly : False
+Display Name : Enable Admin Setup Lockout
+Help String : This feature gives administrators control over how their users can or cannot access BIOS Setup. With an admin password set and this option On, BIOS Setup (via F2 or F12) cannot be seen without the admin password. With an admin password set and this option Off, BIOS Setup can be entered and items viewed in the locked mode.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : NonAdminPsidRevert
+ReadOnly : False
+Display Name : Enable Allow Non-Admin PSID Revert
+Help String : This option controls access to the Physical Security ID (PSID) revert of NVMe hard-drives from the Dell Security Manager prompt. 
+
+When disabled: If a BIOS Admin password is set, PSID revert is protected by the BIOS Admin password and the user will be prompted to enter the BIOS Admin password before performing the revert.
+When enabled: PSID revert is allowed to proceed without providing the BIOS Admin password.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+BIOS Collection : 
+Name : Passwords
+ReadOnly : True
+Display Name : Passwords
+Help String : 
+Collection Name : Passwords
+Attribute Count : 10
+Attributes are : 
+		StrongPassword		PwdUpperCaseRqd		PwdLowerCaseRqd
+		PwdDigitRqd		PwdSpecialCharRqd		PwdMinLen
+		PasswordBypass		PasswordLock		AdminSetupLockout
+		NonAdminPsidRevert
+Enumeration Attribute : 
+Name : CapsuleFirmwareUpdate
+ReadOnly : False
+Display Name : Enable UEFI Capsule Firmware Updates
+Help String : This option controls whether this system allows BIOS updates via UEFI capsule update packages.
+NOTE: Disabling this option will block BIOS updates from services such as Microsoft® Windows Update and Linux Vendor Firmware Service (LVFS).
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : BiosRcvrFrmHdd
+ReadOnly : False
+Display Name : BIOS Recovery from Hard Drive
+Help String : BIOS Recovery enables the user to recover from certain corrupted BIOS conditions from a recovery file on the user primary hard drive or an external USB key
+When "Enabled" is selected, BIOS firmware update procedure stores the recovery file on the user primary hard drive. BIOS automatically recover to a good BIOS firmware if an integrity check is failed during the boot process.
+When "Disabled" is selected, BIOS firmware update procedure does not store the recovery file on the user primary hard drive. BIOS Recovery is only available via the external USB key using on-demand process.
+The default option is "Enabled".
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : AllowBiosDowngrade
+ReadOnly : False
+Display Name : Allow BIOS Downgrade
+Help String : This field controls flashing of the system firmware to previous revisions. 
+If the Allow BIOS Downgrade checkbox is cleared, flashing the system firmware to a previous revision is blocked.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : SupportAssistOSRecovery
+ReadOnly : False
+Display Name : SupportAssist OS Recovery
+Help String : The SupportAssist OS Recovery option will enable or disable the boot flow for SupportAssist OS Recovery tool in the event of certain system errors.  If the SupportAssist OS Recovery setup option is set to disabled then all automatic boot flow for SupportAssist OS Recovery tool will be disabled. Admin password authentication is not performed for this option.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : BIOSConnect
+ReadOnly : False
+Display Name : BIOSConnect
+Help String : The BIOSConnect setup option allows cloud Service OS recovery if the main operating system fails to boot with the number of failures equal to or greater than the value specified by the Auto OS Recovery Threshold setup option and local Service OS does not boot or is not installed. Admin password authentication is not performed for this option.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : AutoOSRecoveryThreshold
+ReadOnly : False
+Display Name : Dell Auto OS Recovery Threshold
+Help String : The Auto OS Recovery Threshold setup option controls the automatic boot flow for SupportAssist System Resolution Console and for Dell OS Recovery Tool.  If the primary operating system experiences consecutive boot failures, and if the count of boot failures is greater than or equal to the value of the Auto OS Recovery Threshold setup option then the system will boot to the SupportAssist System Resolution Console or Dell OS Recovery Tool, if enabled, for remediation.  If Auto OS Recovery Threshold is set to off then all automatic boot flow for SupportAssist System Resolution Console and for Dell OS Recovery Tool will be disabled.
+Possible Values : OFF 1 2 3 
+Possible Values (Display Name) : Off, 1, 2, 3
+Default Values : 2 
+Current Value : 2 
+
+Enumeration Attribute : 
+Name : FOTA
+ReadOnly : False
+Display Name : FOTA
+Help String : The FOTA setup option allows attempting BIOS Image update remotely.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+BIOS Collection : 
+Name : Update,Recovery
+ReadOnly : True
+Display Name : Update,Recovery
+Help String : 
+Collection Name : Update,Recovery
+Attribute Count : 7
+Attributes are : 
+		CapsuleFirmwareUpdate		BiosRcvrFrmHdd		AllowBiosDowngrade
+		SupportAssistOSRecovery		BIOSConnect		AutoOSRecoveryThreshold
+		FOTA
+String Attribute :
+Name : SvcTag
+ReadOnly : False
+Display Name : Service Tag
+Help String : 
+Current Value : 5XH23J4
+
+String Attribute :
+Name : Asset
+ReadOnly : False
+Display Name : Asset Tag
+Help String : 
+Current Value : 
+
+Enumeration Attribute : 
+Name : WakeOnAc
+ReadOnly : False
+Display Name : Wake on AC
+Help String : If this feature is On, the system will briefly power on when AC power is applied to perform basic checks, including discovering how the AC Recovery option is set. When disabled, the system powers off. When enabled, the system proceeds to boot.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : WakeOnLan
+ReadOnly : False
+Display Name : Wake on LAN
+Help String : 
+Possible Values : Disabled LanOnly LanWithPxeBoot 
+Possible Values (Display Name) : Disabled, LAN Only, LAN with PXE Boot
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : AutoOn
+ReadOnly : False
+Display Name : Auto On Time
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Possible Values : Disabled Everyday Weekdays SelectDays 
+Possible Values (Display Name) : Disabled, Every Day, Weekdays, Select Days
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : AutoOnSun
+Modifier : [SuppressIfNot:AutoOn=SelectDays]
+ReadOnly : False
+Display Name : Sunday
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : AutoOnMon
+Modifier : [SuppressIfNot:AutoOn=SelectDays]
+ReadOnly : False
+Display Name : Monday
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : AutoOnTue
+Modifier : [SuppressIfNot:AutoOn=SelectDays]
+ReadOnly : False
+Display Name : Tuesday
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : AutoOnWed
+Modifier : [SuppressIfNot:AutoOn=SelectDays]
+ReadOnly : False
+Display Name : Wednesday
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : AutoOnThur
+Modifier : [SuppressIfNot:AutoOn=SelectDays]
+ReadOnly : False
+Display Name : Thursday
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : AutoOnFri
+Modifier : [SuppressIfNot:AutoOn=SelectDays]
+ReadOnly : False
+Display Name : Friday
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : AutoOnSat
+Modifier : [SuppressIfNot:AutoOn=SelectDays]
+ReadOnly : False
+Display Name : Saturday
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Integer Attribute : 
+Name : AutoOnHr
+Modifier : [ReadOnlyIf:AutoOn=Disabled]
+ReadOnly : False
+Display Name : Hours (HH)
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Current Value : 0
+Lower Bound : 0
+Upper Bound : 23
+Scalar Increment : 1
+
+Integer Attribute : 
+Name : AutoOnMn
+Modifier : [ReadOnlyIf:AutoOn=Disabled]
+ReadOnly : False
+Display Name : Minutes (MM)
+Help String : This setting allows a system to automatically power on for defined days/times. When disabled, the system will not wake at the set time. Set auto on days/times below.
+Current Value : 0
+Lower Bound : 0
+Upper Bound : 59
+Scalar Increment : 1
+
+Enumeration Attribute : 
+Name : AmtCap
+ReadOnly : False
+Display Name : Enable Intel AMT Capability
+Help String : Disable Intel AMT Capability  = Intel Active Management Technology is disabled, MEBx will not be available
+in pre-boot. Once disabled, Intel Active Management Technology can only be
+enabled via BIOS interface. If the Intel AMT is already provisioned, AMT cannot be
+disabled.(Unprovisioning AMT is required first to disable AMT)
+Enable Intel AMT Capability  = Intel Active Management Technology is enabled, MEBx will be available
+via F12 menu and customer can provision AMT. MEBx will not accessible if Device
+Configuration Hotkey Access is disabled or BIOS admin password is not set. 
+Restrict MEBx Access = Intel Active Management Technology is enabled, MEBx will not be available
+in pre-boot and customer can provision AMT from OS.
+Restrict Preboot Access = Intel Active Management Technology is enabled, MEBx and USB 
+provisioning will not be available in pre-boot and customer can provision AMT from OS.
+
+Possible Values : Disabled Enabled RestrictMebxAccess RestrictPrebootAccess 
+Possible Values (Display Name) : Disabled, Enabled, Restrict MEBx Access, Restrict Preboot Access
+Default Values : RestrictPrebootAccess 
+Current Value : RestrictPrebootAccess 
+
+Enumeration Attribute : 
+Name : VerticalIntegration
+ReadOnly : False
+Display Name : OS Agent Requests
+Help String : When enabled, Dell OS Agent(s) will be capable of scheduling onboard diagnostics on a subsequent boot which can help assist in the prevention and resolution of hardware related issues.
+When disabled, Dell OS Agent(s) will not be capable of scheduling any onboard diagnostics and scans must be initiated manually in the pre-boot environment.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : AutoRtcRecovery
+ReadOnly : False
+Display Name : Power-on-Self-Test Automatic Recovery
+Help String : When enabled, if the computer should become unresponsive before completing the BIOSPower-On-Self-Test (POST), the BIOS will attempt to automatically recover the computer.In some cases, this may include reverting BIOS Setup configuration settings to BIOS
+default values, and unprovisioning Intel AMT vPro (if applicable).
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+BIOS Collection : 
+Name : SystemManagement
+ReadOnly : True
+Display Name : System Management
+Help String : 
+Collection Name : SystemManagement
+Attribute Count : 17
+Attributes are : 
+		SvcTag		Asset		WakeOnAc
+		WakeOnLan		AutoOn		AutoOnSun
+		AutoOnMon		AutoOnTue		AutoOnWed
+		AutoOnThur		AutoOnFri		AutoOnSat
+		AutoOnHr		AutoOnMn		AmtCap
+		VerticalIntegration		AutoRtcRecovery
+Enumeration Attribute : 
+Name : FnLock
+ReadOnly : False
+Display Name : Fn Lock Options
+Help String : Change the function key settings below.
+Fn Lock Mode:
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : FnLockMode
+Modifier : [SuppressIf:FnLock=Disabled]
+ReadOnly : False
+Display Name : Lock Mode
+Help String : Change the function key settings below.
+Fn Lock Mode:
+
+Possible Values : DisableStandard EnableSecondary 
+Possible Values (Display Name) : Lock Mode Standard, Lock Mode Secondary
+Default Values : EnableSecondary 
+Current Value : EnableSecondary 
+
+Enumeration Attribute : 
+Name : KeyboardIllumination
+ReadOnly : False
+Display Name : Keyboard Illumination
+Help String : Set the keyboard illumination settings:
+This option allows you to change the keyboard illumination settings. To change these settings during normal use, press <Fn>+<F5>.
+The keyboard will automatically illuminate when the internal keyboard, touchpad, or pointstick are used.
+The <Fn>+<F5> hotkey can also be used to change this setting during normal system operation.
+The keyboard illumination brightness level can be set from 0% to 100%.
+
+Possible Values : Disabled Dim Bright 
+Possible Values (Display Name) : Disabled, Dim, Bright
+Default Values : Dim 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : KbdBacklightTimeoutAc
+ReadOnly : False
+Display Name : Keyboard Backlight Timeout on AC
+Help String : This feature defines the timeout value for the keyboard backlight when an AC adapter is plugged into the system. The keyboard backlight timeout value is only in effect when the backlight is enabled. If the selection of 'Never' is made, the backlight will stay on at all times when the system has AC adapter plugged in.
+
+Possible Values : 5s 10s 15s 30s 1m 5m 15m Never 
+Possible Values (Display Name) : 5 seconds, 10 seconds, 15 seconds, 30 seconds, 1 minute, 5 minute, 15 minute, Never
+Default Values : 10s 
+Current Value : 1m 
+
+Enumeration Attribute : 
+Name : KbdBacklightTimeoutBatt
+ReadOnly : False
+Display Name : Keyboard Backlight Timeout on Battery
+Help String : This feature defines the timeout value for the keyboard backlight when the system is running only on battery power. The keyboard backlight timeout value is only in effect when the backlight is enabled.If the selection of 'Never' is made, the backlight will stay on at all times when the system is running on battery power.
+
+Possible Values : 5s 10s 15s 30s 1m 5m 15m Never 
+Possible Values (Display Name) : 5 seconds, 10 seconds, 15 seconds, 30 seconds, 1 minute, 5 minute, 15 minute, Never
+Default Values : 10s 
+Current Value : 1m 
+
+Enumeration Attribute : 
+Name : DeviceHotkeyAccess
+ReadOnly : False
+Display Name : Device Configuration Hotkey Access
+Help String : This setting manages whether users can access device configuration screens via hotkeys during system startup. This setting prevents user access to Intel® RAID (CTRL+I), LSI RAID (CTRL+C), or Intel® Management Engine BIOS Extension (CTRL+P/F12).
+Enable = User can access device configuration screens using hotkeys.
+One Time Enable = User can access device configuration screens using hotkeys upon the next system startup only. After the next startup, this setting will revert to a disabled state.
+Disable = User cannot access device configuration screens using hotkeys.
+Enabling Device Configuration Hotkey Access allows users to access device configuration screen by pressing the hotkeys during system startup.
+One-Time Enable allows access to device configuration screens via hotkeys only during the next system startup. After the next startup, this setting will revert to a disabled state.
+Disabling Device Configuration Hotkey Access will prevent users from accessing Intel® RAID (CTRL+I), LSI RAID (CTRL+C), and Intel® Management Engine BIOS Extension (CTRL+P/F12).
+
+Possible Values : Enabled OnetimeEnable Disabled 
+Possible Values (Display Name) : Enabled, One Time Enable, Disabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+BIOS Collection : 
+Name : Keyboard
+ReadOnly : True
+Display Name : Keyboard
+Help String : 
+Collection Name : Keyboard
+Attribute Count : 6
+Attributes are : 
+		FnLock		FnLockMode		KeyboardIllumination
+		KbdBacklightTimeoutAc		KbdBacklightTimeoutBatt		DeviceHotkeyAccess
+
+Enumeration Attribute : 
+Name : PowerWarn
+ReadOnly : False
+Display Name : Enable Adapter Warnings
+Help String : When enabled, this option will display warning messages during boot when adapters with too little power capacity are detected.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : WarningsAndErr
+ReadOnly : False
+Display Name : Warnings and Errors
+Help String : The Warnings and Errors options cause the boot process to only pause when warnings or errors are detected, rather than stop, prompt and wait for user input.  This feature is valuable in situations where the system may be remotely managed and therefore has no locally connected keyboard or console available for a user to respond; for example, in a headless configuration.
+Note that errors deemed critical to the operation of the system hardware will always halt the system.
+Possible Values : PromptWrnErr ContWrn ContWrnErr 
+Possible Values (Display Name) : Prompt on Warnings and Errors, Continue on Warnings, Continue on Warnings and Errors
+Default Values : PromptWrnErr 
+Current Value : PromptWrnErr 
+
+Enumeration Attribute : 
+Name : ExtPostTime
+ReadOnly : False
+Display Name : Extend BIOS POST Time
+Help String : Configure the BIOS POST (Power-On Self-Test) load time below.
+Possible Values : 0s 5s 10s 
+Possible Values (Display Name) : 0 seconds, 5 seconds, 10 seconds
+Default Values : 0s 
+Current Value : 0s 
+
+Enumeration Attribute : 
+Name : MacAddrPassThru
+ReadOnly : False
+Display Name : MAC Address Pass-Through
+Help String : This feature replaces the external NIC MAC address (in a supported dock or dongle) with the selected MACaddress from the system. The default option is to use the System Unique MAC Address.
+When the Integrated NIC option is selected, we recommend one of the following:
+  - Disable the integrated NIC in the BIOS to prevent any issues from multiple NICs
+    on the network with identical MAC addresses.
+  - If the Integrated NIC cannot be disabled, do not connect it to the same network as your dock
+    or USB Ethernet dongle.
+Possible Values : SystemUnique IntegratedNic1 Disabled 
+Possible Values (Display Name) : System Unique MAC Address, Integrated NIC 1 MAC Address, Disabled
+Default Values : SystemUnique 
+Current Value : SystemUnique 
+
+Enumeration Attribute : 
+Name : OwnerTagWithLogo
+ReadOnly : False
+Display Name : Show Ownership Tag with Logo
+Help String : Enabling this feature will show the system Ownership Tag in addition to the BIOS Boot logo. This option is only available if an Ownership Tag has been set.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+BIOS Collection : 
+Name : Pre-bootBehavior
+ReadOnly : True
+Display Name : Pre-boot Behavior
+Help String : 
+Collection Name : Pre-bootBehavior
+Attribute Count : 5
+Attributes are : 
+		PowerWarn		WarningsAndErr		ExtPostTime
+		MacAddrPassThru		OwnerTagWithLogo
+Enumeration Attribute : 
+Name : Virtualization
+ReadOnly : False
+Display Name : Enable Intel Virtualization Technology (VT)
+Help String : When ON, the system will be able to run a virtual machine monitor (VMM).
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : VtForDirectIo
+ReadOnly : False
+Display Name : Enable Intel VT for Direct I/O
+Help String : When On, the system will be able to perform Virtualization Technology for Directed I/O (VT-d). VT-d is an Intel method that provides virtualization for memory map I/O.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : TrustExecution
+ReadOnly : False
+Display Name : Enable Intel Trusted Execution Technology (TXT)
+Help String : This option specifies whether a Measured Virtual Machine Monitor (MVMM) can utilize the additional hardware capabilities provided by Intel® Trusted Execution Technology. The following must be enabled in order to enable Intel® TXT
+- Trusted Platform Module (TPM)
+- Intel® Hyper-Threading
+- All CPU cores (Multi-Core Support)
+- Intel® Virtualization Technology
+- Intel® VT for Direct I/O
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Value Modifiers : Disabled[ForceIf:TpmSecurity=Disabled][ForceIf:Virtualization=Disabled][ForceIf:VtForDirectIo=Disabled][ForceIfNot:CpuCore=CoresAll]
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : PreBootDma
+Modifier : [ReadOnlyIf:VtForDirectIo=Disabled]
+ReadOnly : False
+Display Name : Enable Pre-Boot DMA Support
+Help String : This setting controls Pre-boot DMA protection for both Internal and External ports.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : KernelDma
+Modifier : [ReadOnlyIf:VtForDirectIo=Disabled]
+ReadOnly : False
+Display Name : Enable OS Kernel DMA Support
+Help String : This setting controls Kernel DMA protection for both Internal and External ports.This setting does not directly enable DMA protection in the OS. However, for OS's that support DMA protection, the setting will indicate to the OS that the BIOS supports the feature.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : InternalDmaCompatibility
+Modifier : [ReadOnlyIf:KernelDma=Disabled][ReadOnlyIf:VtForDirectIo=Disabled]
+ReadOnly : False
+Display Name : Internal Port DMA Compatibility Mode
+Help String : When Enabled, BIOS will notify the OS that the internal ports are not DMA capable. This is intended to help with devices that have OS DMA compatibility issues. This setting does not affect external port DMA or Pre-boot DMA support.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+BIOS Collection : 
+Name : VirtualizationSupport
+ReadOnly : True
+Display Name : Virtualization Support
+Help String : 
+Collection Name : VirtualizationSupport
+Attribute Count : 6
+Attributes are : 
+		Virtualization		VtForDirectIo		TrustExecution
+		PreBootDma		KernelDma		InternalDmaCompatibility
+
+Enumeration Attribute : 
+Name : CpuCoreSelect
+Modifier : [ReadOnlyIfNot:ActiveECoresSelect=AllDisable]
+ReadOnly : False
+Display Name : Active Multiple Performance Cores (P-Cores) Select
+Help String : This setting allows you to change the number of CPU cores available to the OS. The default value is set to All Active. When setting is All Active, Active Core Selection item is hidden.
+Possible Values : PartialActive AllActive 
+Possible Values (Display Name) : Partial Active, All Active
+Default Values : AllActive 
+Current Value : AllActive 
+
+Enumeration Attribute : 
+Name : ActiveECoresSelect
+Modifier : [ReadOnlyIfNot:CpuCoreSelect=AllActive]
+ReadOnly : False
+Display Name : Active Efficient Cores (E-Cores) Select
+Help String : This setting allows you to change the number of CPU E-Cores available to the OS. The default value is set to All Active. When setting is All Active, Active E-Cores Number item is hidden. This option has no effect for SOC E-Core when it available.
+Possible Values : AllDisable PartialActive AllActive 
+Possible Values (Display Name) : All Disable, Partial Active, All Active
+Default Values : AllActive 
+Current Value : AllActive 
+
+Enumeration Attribute : 
+Name : Speedstep
+ReadOnly : False
+Display Name : Enable Intel SpeedStep Technology
+Help String : When On, this feature allows the system to dynamically adjust processor voltage and core frequency, decreasing average power consumption and heat production.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : CStatesCtrl
+ReadOnly : False
+Display Name : Enable C-State Control
+Help String : This feature enables the CPU's ability to enter and exit low power states. When Off, it disables all C-states. When On, it enables all C-states that the chipset/platform allows. 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : TurboMode
+ReadOnly : False
+Display Name : Enable Intel Turbo Boost Technology
+Help String : This option enables or disables the Intel® TurboBoost" mode of the processor.
+
+Disabled = Does not allow the TurboBoost" driver to increase the performance state of the processor above the standard performance.
+Enabled = Allows the Intel® TurboBoost" driver to increase the performance of the CPU or graphics processor.
+
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : LogicProc
+ReadOnly : False
+Display Name : Enable Intel Hyper-Threading Technology
+Help String : When On, this feature uses processor resources more efficiently, enabling multiple threads to run on each core.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : IntelSagv
+ReadOnly : False
+Display Name : Intel SaGV
+Help String : When enabled, the system dynamically adjusts voltage and frequencies depending on power and performance requirements.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+BIOS Collection : 
+Name : Performance
+ReadOnly : True
+Display Name : Performance
+Help String : 
+Collection Name : Performance
+Attribute Count : 7
+Attributes are : 
+		CpuCoreSelect		ActiveECoresSelect		Speedstep
+		CStatesCtrl		TurboMode		LogicProc
+		IntelSagv
+Enumeration Attribute : 
+Name : BiosLogClear
+ReadOnly : False
+Display Name : Clear BIOS Event Log
+Help String : 
+Possible Values : Keep Clear 
+Possible Values (Display Name) : Keep Log, Clear Log
+Default Values : Keep 
+Current Value : Keep 
+
+Enumeration Attribute : 
+Name : ThermalLogClear
+ReadOnly : False
+Display Name : Clear Thermal Event Log
+Help String : 
+Possible Values : Keep Clear 
+Possible Values (Display Name) : Keep Log, Clear Log
+Default Values : Keep 
+Current Value : Keep 
+
+Enumeration Attribute : 
+Name : PowerLogClear
+ReadOnly : False
+Display Name : Clear Power Event Log
+Help String : 
+Possible Values : Keep Clear 
+Possible Values (Display Name) : Keep Log, Clear Log
+Default Values : Keep 
+Current Value : Keep 
+
+BIOS Collection : 
+Name : SystemLogs
+ReadOnly : True
+Display Name : System Logs
+Help String : 
+Collection Name : SystemLogs
+Attribute Count : 3
+Attributes are : 
+		BiosLogClear		ThermalLogClear		PowerLogClear
+
+Integer Attribute : 
+Name : CommonSystemId
+ReadOnly : False
+Display Name : Common System Identifier
+Help String : 
+Current Value : 3427
+Lower Bound : 0
+Upper Bound : 65535
+Scalar Increment : 1
+
+Enumeration Attribute : 
+Name : OverrideBatteryChargeFactory
+ReadOnly : False
+Display Name : Override Battery Charging Limit in Factory
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Enabled 
+Current Value : Enabled 
+
+Enumeration Attribute : 
+Name : ServiceResetConfig
+ReadOnly : False
+Display Name : Service reset configuration
+Help String : 
+Possible Values : Disabled OA3Preserve ProjectVariablesPreserve 
+Possible Values (Display Name) : Disabled, OA3 Preserve, Project Variables Preserve
+Default Values : Disabled 
+Current Value : 
+
+String Attribute :
+Name : Generation
+ReadOnly : True
+Display Name : System Generation
+Help String : 
+Current Value : 25Q1
+
+String Attribute :
+Name : IBV
+ReadOnly : True
+Display Name : Independent BIOS Vendor
+Help String : 
+Current Value : DELL
+
+Integer Attribute : 
+Name : MfgModePxeAttribute
+ReadOnly : False
+Display Name : Manufacturing Mode PXE Attribute
+Help String : 
+Current Value : 0
+Lower Bound : 0
+Upper Bound : 6
+Scalar Increment : 1
+
+Integer Attribute : 
+Name : WlanCountryCode
+ReadOnly : False
+Display Name : WLAN Country Code
+Help String : 
+Current Value : 16720
+Lower Bound : 0
+Upper Bound : 65535
+Scalar Increment : 1
+
+Enumeration Attribute : 
+Name : AdvancedDebugMenu
+ReadOnly : False
+Display Name : Advanced Debug Menu
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : LongLifeCyclePriBattery
+ReadOnly : False
+Display Name : Long Life Cycle Primary Battery
+Help String : 
+Possible Values : NormalBattery LclGen1Battery LclGen2Battery 
+Possible Values (Display Name) : Normal Battery, LCL Gen1 Battery, LCL Gen2 Battery
+Default Values : NormalBattery 
+Current Value : NormalBattery 
+
+Enumeration Attribute : 
+Name : LongLifeCycleSecBattery
+ReadOnly : False
+Display Name : Long Life Cycle Secondary Battery
+Help String : 
+Possible Values : NormalBattery LclGen1Battery LclGen2Battery 
+Possible Values (Display Name) : Normal Battery, LCL Gen1 Battery, LCL Gen2 Battery
+Default Values : NormalBattery 
+Current Value : NormalBattery 
+
+Enumeration Attribute : 
+Name : HEVC
+ReadOnly : False
+Display Name : High Efficiency Video Coding
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : EnhancedChasIntrusion
+ReadOnly : False
+Display Name : Enhanced Chassis Intrusion
+Help String : Allow chassis intrusion features such as TPM clear, drive wipe, etc.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : 
+
+Enumeration Attribute : 
+Name : ChargePowerLimitFactoryFlag
+ReadOnly : False
+Display Name : Charge Power Limit Factory Flag
+Help String : A flag to configure charging performance limitation for EU products.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Enumeration Attribute : 
+Name : MasterPasswordLockout
+ReadOnly : False
+Display Name : Master Password Lockout
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Integer Attribute : 
+Name : SupportAssistSupportLevel
+ReadOnly : True
+Display Name : SupportAssist Support Level
+Help String : 
+Current Value : 784
+Lower Bound : 0
+Upper Bound : 65535
+Scalar Increment : 1
+
+Enumeration Attribute : 
+Name : ChassisIntrusionReset
+ReadOnly : False
+Display Name : Chassis Intrusion Reset
+Help String : Enabling this feature resets the state of ChassisIntrusionStatus attribute. Set it to Disabled will have no effect and reading this feature will have no meaning.
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : 
+
+Enumeration Attribute : 
+Name : ChassisIntrusionStatus
+ReadOnly : True
+Display Name : Chassis Intrusion Status
+Help String : Provides the current status of the chassis intrusion detection. 'Closed' indicates the chassis is currently closed. 'Open' indicates the chassis is currently open. 'Tripped' indicates the chassis was previously opened and is now closed. This attribute is read-only, writing any value to this attribute has no effect.
+Possible Values : Closed Open Tripped 
+Possible Values (Display Name) : Closed, Open, Tripped
+Default Values : Closed 
+Current Value : Closed 
+
+Enumeration Attribute : 
+Name : LogoType
+ReadOnly : False
+Display Name : Logo Type
+Help String : 
+Possible Values : DellLogo CustomLogo 
+Possible Values (Display Name) : Dell Logo, Custom Logo
+Default Values : DellLogo 
+Current Value : DellLogo 
+
+Enumeration Attribute : 
+Name : SafeAuthEnforce
+ReadOnly : False
+Display Name : SAFE Authentication Enforcement
+Help String : 
+Possible Values : Disabled Enabled 
+Possible Values (Display Name) : Disabled, Enabled
+Default Values : Disabled 
+Current Value : Disabled 
+
+Custom Option :
+Name : DisplayType
+Display Type : STN
+Maximum Panel Resolution : Resolution is provided by -get LCDPanelRes command
+Video Memory Size (in 265KB units) : 256
+
+Custom Option :
+Name : LCDPanelRes
+Maximum Horizontal Resolution (in number of pixels): 1920
+Maximum Vertical Resolution (in number of pixels): 1200
+
+Custom Option :
+Name : ActDisplays
+Laptop LCD is inactive 
+External analog device is inactive 
+External TV is inactive 
+External DVI device is inactive 
+
+Custom Option :
+Name : DisplayInfo
+Currently Attached Devices :
+Current Active Devices : 
+Next State Active Devices : 
+
+Custom Option :
+Name : ECChipInfo
+EC Device ID : 26
+EC Revision : 178
+
+Custom Option :
+Name : AddnlBoardInfo
+Current value : 0
+
+Custom Option :
+Name : TFRlanguageInfo
+Current value : 0
+
+Custom Option :
+Name : VRProgState
+Vendor: RICHTEK
+VR Controller FW version from EC Payload = 2
+Current FW version in VR controller = 2
+VR programming result: No Program
+GPIO CPU ID match result: Not Supported
+
+Custom Option :
+Name : ACSource
+Current Value : Not Connected  
+
+Custom Option :
+Name : BatteryCount
+Current Value : 1
+
+Custom Option :
+Name : DockThermalState
+Local Thermal is ON
+Remote Thermal is ON
+
+Custom Option :
+Name : TypeCCount
+Current Value : 2
+
+Custom Option :
+Name : TypeCStatus
+Value : 0
+
+Custom Option :
+Name : TypeCStatus
+Value : 0xfe
+Display port
+Thunderbolt
+USB4 Mode
+PPS Mode
+Orientation
+
+Custom Option :
+Name : LidStatus
+Current Value : Closed
+
+Custom Option :
+Name : ProxSensorStatus
+Current Value : 0
+
+Custom Option :
+Name : ISHStatus
+Current Value : Clamshell Mode
+
+Custom Option :
+Name : HallSensorStatus
+Current Value : Tablet Mode
+
+Custom Option :
+Name : DockFanSpeed
+Current Value : Test Mode, Fan is ON
+
+Custom Option :
+Name : ECVer
+Current Value : 1.9.1
+
+Custom Option :
+Name : ECiFuseStatus
+Current Value : Authentication fused | Encryption fused | ECUS fused
+
+Custom Option :
+Name : PRUStatus
+PRU Status : Good
+
+Custom Option :
+Name : LogoType
+Current Value : Dell Logo
+
+Custom Option :
+Name : ABIStatus 
+ABI Spec Version : 1.6
+Current ABI status : 
+ABIState = Disabled
+ABIProvState = Disabled
+Legacy Management Interface is supported
+LegacyInterfaceAccess = Enabled
+
+Custom Option :
+Name : BIOS_Config
+Supported Configs :- 
+	Built-In Safe Defaults (BSD)
+	Last Known Good (LKG)
+	Factory Defaults (FD)
+	User Confguration 1 (UC1)
+Available Configs :- 
+	Built-In Safe Defaults (BSD)
+	Last Known Good (LKG)
+
+Custom Option :
+Name : PDF_ExtUSBPorts
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_Microphone
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_Audio
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_WLAN
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_Bluetooth
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_FCamera
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_NIC
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_SATAOp
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_Thunderbolt
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_InternalSpeaker
+Current Value : Enabled
+
+Custom Option :
+Name : PDF_M2PCIeSSD0
+Current Value : Enabled
+
+Custom Option :
+Name : DockInfo
+System Component Count : 4
+Component #1:
+		Description : Main,EC,NPCX993D(iFuse),Fused,0 :Query 0 0 7 1 0
+		Firmware Version : (BCD)01090100
+Component #2:
+		Description : Main,EC,NPCX993D(iFuse),Fused,1 :Query 0 0 7 1 1
+		Firmware Version : (BCD)01080000
+Component #3:
+		Description : Main,TypeC Cntrl,Cypress,None,0 :Query 0 1 2 0 0
+		Firmware Version : (BCD)01336437
+Component #4:
+		Description : Main,???,0,0,0 :Query 0 8 0 0 0
+		Firmware Version : (BCD)00020003
+
+Base Component Count : 0
+
+Custom Option :
+Name : SysAuthTag
+Current Value : 
+
+Custom Option :
+Name : AssetTagEx
+Current Value : 
+
+Custom Option :
+Name : OwnerTag
+Current Value : 
+
+Custom Option :
+Name : CBM_Name
+Current Value : Dell Pro 14 PC14250
+
+Custom Option :
+Name : TP_MAC
+Current Value :  S-CI-DS-CI-DS-CI
+
+Custom Option :
+Name : TAA_MAC
+Current Value : 00-00-00-00-00-00
+
+Custom Option :
+Name : Version_Manifest
+Manifest Entry # 1:
+	Entry Revision: 1
+	Entry Name GUID: {F6BAA1AC-39BC-4066-92F3-2471D1E7C5C6}
+	Display Name: System BIOS with BiosGuard
+	Version: 1.12.0.0
+
+Manifest Entry # 2:
+	Entry Revision: 1
+	Entry Name GUID: {597FCA32-5B4E-4C56-BDB2-7E18E08FA4E5}
+	Display Name: Embedded Controller
+	Version: 1.9.1.0
+
+Manifest Entry # 3:
+	Entry Revision: 1
+	Entry Name GUID: {B36C98A8-7208-4996-97EA-8A14BBB20C67}
+	Display Name: Backup Embedded Controller
+	Version: 1.8.0.0
+
+Manifest Entry # 4:
+	Entry Revision: 1
+	Entry Name GUID: {7439ED9E-70D3-4B65-9E33-1963A7AD3C37}
+	Display Name: Intel Management Engine Corporate Firmware Update 
+	Version: 18.1.18.2724
+
+Manifest Entry # 5:
+	Entry Revision: 1
+	Entry Name GUID: {D3EB2492-138B-484C-A7D9-C6D860C9AB91}
+	Display Name: Corporate Gigabit Ethernet
+	Version: 0.1.0.0
+
+Manifest Entry # 6:
+	Entry Revision: 1
+	Entry Name GUID: {F4DD8E34-3011-40FE-A0B0-6D1FA21F2371}
+	Display Name: PCR0 XML
+	Version: 0.0.0.1
+
+Manifest Entry # 7:
+	Entry Revision: 1
+	Entry Name GUID: {3FC7228D-D3F7-47AF-B8BC-DABCB41252AD}
+	Display Name: System Board Map
+	Version: 1.0.1.0
+
+Manifest Entry # 8:
+	Entry Revision: 1
+	Entry Name GUID: {EA4CAF7D-18DF-471A-910A-E81507C8AF5C}
+	Display Name: Intel TBT Retimer
+	Version: 0.6.26.5
+
+Manifest Entry # 9:
+	Entry Revision: 1
+	Entry Name GUID: {2D3A02CD-626D-4CAA-9698-9457CF8C01EF}
+	Display Name: Main System Cypress Port Controller 0 
+	Version: 1.33.64.37
+
+Manifest Entry # 10:
+	Entry Revision: 1
+	Entry Name GUID: {B4EF38C3-09DF-43D7-BC9F-6245B442F616}
+	Display Name: BiosConnect Wireless drivers
+	Version: 2.54.0.0
+
+Manifest Entry # 11:
+	Entry Revision: 1
+	Entry Name GUID: {07DCC837-0C45-6A27-8501-00FED36DCDBB}
+	Display Name: C7FOE20V014500005000Integrated_Webcam_FHD
+	Version: 10.3.0.4
+
+Manifest Entry # 12:
+	Entry Revision: 1
+	Entry Name GUID: {EF504BD7-CDED-4451-9C60-6B4AB31BA813}
+	Display Name: BG7 KIOXIA 256GB
+	Version: 18.48.1.2
+
+Manifest Entry # 13:
+	Entry Revision: 1
+	Entry Name GUID: {36CA9C07-C252-48EF-973E-E6ACD3947DCD}
+	Display Name: WIFICard_INTEL_AX211_PCI\VEN_8086&DEV_7740&SUBSYS_40908086
+	Version: 2.54.0.0
+
+
+Custom Option :
+Name : EPPID
+EPPID : VN0F72D6WSV00634015OA00
+
+	Country of Origin 	: VN
+	Dell Part Number 	: 0F72D6
+	Manufacturer ID 	: WSV00
+	Date Code 		: 634
+	Sequence Number 	: 015O
+	Revision Level 		: A00
+
+Custom Option :
+Name : AdminPwdStatus
+Admin password is not set
+
+Custom Option :
+Name : SystemPwdStatus
+System password is not set
+
+Custom Option :
+Name : OwnerPwdStatus
+Owner password is not set
+
+Custom Option :
+Name : AdminPwdUsed
+Admin password is used
+
+Custom Option :
+Name : SystemPwdUsed
+System password is used
+
+Custom Option :
+Name : OwnerPwdUsed
+Owner password is used
+

@@ -23,7 +23,6 @@ set /a acount+=1
 if %acount% gtr 5 goto pass
 wDiagLed64.exe /setkbbl 4
 ping 127.0.0.1 -n 2
-::ping 127.0.0.1 -n 1
 goto OpenKBL
 
 ::-------------------------Result--------------------------------------

@@ -34,7 +34,6 @@ echo start >LED.LOG
 IF NOT @%KEYBL%==@NBL (
 ::PlatCfg64W.exe -w Keyboard_Backlight_Level:100_Percent >>LED.LOG
 wDiagLed64.exe /setkbbl 4 >>LED.LOG
-::wDiagLed64.exe /setkbbl 3 >>LED.LOG
 start /min OpenKBL.bat
 )
 

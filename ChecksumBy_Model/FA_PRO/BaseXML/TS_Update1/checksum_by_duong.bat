@@ -1,0 +1,1 @@
+if exist D:\FA_PRO\BaseXML\TS_Update1\checksumTO.bat call D:\FA_PRO\BaseXML\TS_Update1\checksumTO.bat

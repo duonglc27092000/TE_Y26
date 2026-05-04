@@ -15,3 +15,6 @@ D:\TEST_UI\SendMsg.exe 1 reloadxml
 
 goto end
 :end
+
+rem create by duongluong
+rem == fix copy lost file bios

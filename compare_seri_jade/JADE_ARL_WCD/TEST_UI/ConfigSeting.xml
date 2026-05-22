@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<SETTING>
+	<Version>Version: V2.1.0.2</Version>	
+	
+	<BASEITEM>  
+		        			
+	</BASEITEM>
+	
+	<RELOADPOINT>
+		<STATION>BASETU</STATION>
+		<STATION>BASETO</STATION>
+		<STATION>TD</STATION>
+		<STATION>TF</STATION>
+		<STATION>TG</STATION>
+		<STATION>TY</STATION>
+		<STATION>QD</STATION>
+		<STATION>CJ</STATION>
+        <STATION>TU</STATION>
+        <STATION>TS</STATION>
+        <STATION>TO</STATION>
+        <STATION>TV</STATION>
+    </RELOADPOINT>	
+
+	<NOSFCSCHK>  
+		<STATION>BASEITEM</STATION>
+		<STATION>BASEIC</STATION> 
+		<STATION>BASETU</STATION>
+		<STATION>BASETS</STATION>  
+		<STATION>LED_AUTO</STATION> 
+		<STATION>KB_AUTO</STATION>  
+		<STATION>Touch1_AUTO</STATION> 
+		<STATION>Touch2_AUTO</STATION>  
+		<STATION>RGB_AUTO</STATION>
+		<STATION>IO_AUTO</STATION>   
+		<STATION>BASETO</STATION>      			
+	</NOSFCSCHK>
+
+	<WAIVEITEM>	
+		<STATION>MJ</STATION>
+	</WAIVEITEM>
+
+	<TimerSet> 		 
+		<JobFilePath>D:\NewCommon\Common\Test.py</JobFilePath>
+		<TimeInterval>2</TimeInterval> 
+            <TimerEnable>true</TimerEnable> 	     			
+	</TimerSet>		
+	
+</SETTING>

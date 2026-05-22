@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<TESTINFO>
+<MODEL>Jade1416</MODEL>
+<STATION ID="BASETU">
+<THREAD NUM="1">
+	<TESTITEM>
+	   <ITEM_NAME>检查机种</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\CheckModel\CheckModel.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckModel.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>连接无线网络</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\LinkAP\LinkAP.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LinkAP.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>获取ServiceTag</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSVC\GetSVC.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\GetSVC.jpg</PICTURE_FILE>
+	</TESTITEM>		
+		
+	<TESTITEM>
+	   <ITEM_NAME>获取机台SFCS信息</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\GetSfcsInfo.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\GetSfcsInfo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+		<TESTITEM>
+	   <ITEM_NAME>生成CFG文件</ITEM_NAME>               
+	   <BATCH_FILE>D:\FA_PRO\Getcfg\Getcfg.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Getcfg.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+		<ITEM_NAME>safe认证</ITEM_NAME>               
+		<BATCH_FILE>D:\FA_PRO\SAFE\WDLSAFE.py</BATCH_FILE>
+		<PICTURE_FILE>D:\TEST_UI\Picture_UI\SAFE.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+	<TESTITEM>
+	   <ITEM_NAME>设置工厂模式</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\Setmode\Setmode.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Setmode.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+       <ITEM_NAME>Flash_LAN_MAC地址</ITEM_NAME>         
+	   <BATCH_FILE>D:\BURNIN\LANID\Write_LANID.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_Lanid.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	  <TESTITEM>
+	  <ITEM_NAME>TS测试complete</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Shutdown\Shutdown.py</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+
+  </THREAD>
+</STATION>
+</TESTINFO>

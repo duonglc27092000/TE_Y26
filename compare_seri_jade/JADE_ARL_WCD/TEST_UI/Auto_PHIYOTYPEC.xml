@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<TESTINFO>
+<MODEL>JadeARL_FAManuf</MODEL>
+<STATION ID="BASETU">
+<THREAD NUM="1">
+	<TESTITEM>
+	   <ITEM_NAME>检查机种</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\CheckModel\CheckModel.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckModel.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>连接无线网络</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\LinkAP\LinkAP.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LinkAP.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+       <ITEM_NAME>更新测试程式</ITEM_NAME>           
+       <BATCH_FILE>D:\FA_PRO\BaseXML\TS_Update\TS_Update.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\TS_Update.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>获取ServiceTag</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSVC\GetSVC.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\GetSVC.jpg</PICTURE_FILE>
+	</TESTITEM>		
+		
+	<TESTITEM>
+	   <ITEM_NAME>获取机台SFCS信息</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\GetSfcsInfo.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\GetSfcsInfo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>生成CFG文件</ITEM_NAME>               
+	   <BATCH_FILE>D:\FA_PRO\Getcfg\Getcfg.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Getcfg.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Common_Safe认证</ITEM_NAME>               
+	   <BATCH_FILE>D:\FA_PRO\Common_SAFE\Common_Safe.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Setmode.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+	<TESTITEM>
+	   <ITEM_NAME>设置工厂模式</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\Setmode\Setmode.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Setmode.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+       <ITEM_NAME>LoadXML</ITEM_NAME>           
+       <BATCH_FILE>D:\FA_PRO\BaseXML\TS_Update\LoadFAXML.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\ReloadXML.jpg</PICTURE_FILE>
+	</TESTITEM>
+  </THREAD> 
+</STATION>
+
+<STATION ID="TU">
+ 
+ <THREAD NUM="1">		
+	<TESTITEM>
+	   <ITEM_NAME>BIOS_DEFAULT</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\BIOS_DEFAULT.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\bios_BR.jpg</PICTURE_FILE>
+	</TESTITEM>
+			
+	<TESTITEM>
+	   <ITEM_NAME>蓝屏dump重启设定</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\dump\dump.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+    <TESTITEM>
+	   <ITEM_NAME>ATF_MTDL_START</ITEM_NAME>         
+	   <BATCH_FILE>D:\BURNIN\NEWMTDL\AFT_MTDL_START\AFT_MTDL_START.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_SVC_PPID.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>麦克风录音测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Audio\MIC\MicTest.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\AudioMIC.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>CheckIN</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckIN.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_SVC_PPID.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Copy_AIKB测试</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\Keyboard_AI\COPY_AIKB.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LinkAP.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	
+	<TESTITEM>
+	   <ITEM_NAME>SecureBootCheck</ITEM_NAME>          
+	   <BATCH_FILE>D:\FA_PRO\CheckSecureboot\SecureBoot_Check.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+       <ITEM_NAME>BIOS_BR工单检查</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\bios_BR\bios_BR.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\bios_BR.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Block工单检查</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\BlockBuild\BlockBuild.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\BlockBuild.jpg</PICTURE_FILE>
+	</TESTITEM>
+	 	
+	<TESTITEM>
+	   <ITEM_NAME>PPID检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\Write_SVC_PPID.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_SVC_PPID.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>CPU信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckCPU\CheckCPU.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckCPU.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>CpuLevel检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\WBDDA6159\CpuLevel.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckCPU.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+       <ITEM_NAME>HDD信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckHDD\CheckHDD.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckHDD.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>DIMM信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckDIMM\CheckDIMM.PY</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckDIMM.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>DIMM频率检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckDIMM\CheckDIMM_Speed.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckDIMM.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+		
+	<TESTITEM>
+	   <ITEM_NAME>MB信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CheckMB\CheckGPU.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckMB.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>CheckTXT</ITEM_NAME>          
+	   <BATCH_FILE>D:\FA_PRO\SecurePCtest\CheckTXT.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>Cable信息检查</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\CableCheck\CheckCables.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>连接无线网络</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\LinkAP\LinkAP.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LinkAP.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>准备TU过站信息</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\SFCS_XX\SFCS_TU.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\SFCS_TU.jpg</PICTURE_FILE>
+	</TESTITEM>
+	</THREAD>
+</STATION>
+<STATION ID="TS"> 
+ <THREAD NUM="1">
+ 
+	<TESTITEM>
+	   <ITEM_NAME>CHKfirewall</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\Write_SVC_PPID\CHKfirewall.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_SVC_PPID.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+ 	<TESTITEM>
+	   <ITEM_NAME>重启机台</ITEM_NAME>          
+	   <BATCH_FILE>D:\FA_PRO\CWDRBT.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Restart.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>Check_TypeC_Connect</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\Check_TypeC_Connect\Check_TypeC_Connect.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Charge.jpg</PICTURE_FILE>
+	</TESTITEM>
+		
+	<TESTITEM>
+	  <ITEM_NAME>TYPEC_PHIYO1</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\PHIYO2605\Auto_PHIYO1.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Charge.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>TYPEC_PHIYO2</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\PHIYO2605\Auto_PHIYO2.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Charge.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>盒盖测试</ITEM_NAME>
+	  <BATCH_FILE>D:\FA_PRO\Covertest\Covertest.py</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\CoverTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>CheckPPID检查</ITEM_NAME> 
+	   <BATCH_FILE>D:\FA_PRO\CheckPPID\CheckPPID.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckPPID.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>ServiceTag检查</ITEM_NAME> 
+	   <BATCH_FILE>D:\FA_PRO\CheckSVC\CheckSVC.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckSVC.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>TP测试</ITEM_NAME>    
+	   <BATCH_FILE>D:\FA_PRO\LED_Auto\QRCode\Touch_Pad.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>LCD256测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\Lcd\LCD256.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LCDCheck.JPG</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>LCD明暗度测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\LCD\LCDIntensity.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LCDCheck.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+    <TESTITEM>
+	  <ITEM_NAME>LCD水波纹测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\LCDWater\LCDGarbage.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LCDGarbage.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>LCD黑边测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\LCD\LCDSite.py</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LCDGarbage.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>LED灯测试</ITEM_NAME>         
+	  <BATCH_FILE>D:\FA_PRO\LED_Test\LED_Test.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>键盘背光灯测试</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\KBLIGHT\KBLIGHT.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\KBLIGHT.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>IRCAMERA</ITEM_NAME>           
+	  <BATCH_FILE>D:\FA_PRO\IRCAMERA\IRCAM.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\IRCAMERA.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+	<TESTITEM>
+	   <ITEM_NAME>Waititem触屏测试</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread2_触屏测试.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>摄像头测试</ITEM_NAME>        
+	   <BATCH_FILE>D:\FA_PRO\FaceCamera\FaceCamera.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\FaceCamera.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	
+	
+	<TESTITEM>
+	   <ITEM_NAME>Waititem键盘测试</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread2_键盘测试.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	
+	
+	<TESTITEM>
+	   <ITEM_NAME>Check摄像</ITEM_NAME>
+	   <BATCH_FILE>D:\FA_PRO\FaceCamera\CheckCameraJPG.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\FaceCamera.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	
+	
+	<TESTITEM>
+	  <ITEM_NAME>耳机孔测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\AudioLoop\Audioloop.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Audioloop.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>KB复测</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\KeyBoard\KB_ReTest.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\KBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+    	
+	<TESTITEM>
+	   <ITEM_NAME>TBOX测试</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\ATS\TBOXHDMI\HDMITest.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\HDMITest.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	
+
+    <TESTITEM>
+	  <ITEM_NAME>Docking-HDMI</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\TypeC_HDMI\DOCKINGHDMI.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USBTest.jpg</PICTURE_FILE>
+    </TESTITEM>
+	
+	
+
+	<TESTITEM>
+	   <ITEM_NAME>WaititemTS2测试完成</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread2End.log</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>WaititemTS3测试完成</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread3End.log</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	<TESTITEM>
+	  <ITEM_NAME>QR_Start1</ITEM_NAME>         
+	  <BATCH_FILE>D:\FA_PRO\LED_Auto\QRCode\ShowSN.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	
+    <TESTITEM>
+	   <ITEM_NAME>ATF_MTDL_END</ITEM_NAME>         
+	   <BATCH_FILE>D:\BURNIN\NEWMTDL\AFT_MTDL_START\AFT_MTDL_END.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_SVC_PPID.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>OrderType</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\Estimatedtime\OrderType.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\GetSfcsInfo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Check_markteingname</ITEM_NAME>           
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckMarketingName.BAT</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\GetSfcsInfo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+    <TESTITEM>
+	  <ITEM_NAME>TS测试complete</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Shutdown\Shutdown.py</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+       <ITEM_NAME>断开无线网</ITEM_NAME>           
+       <BATCH_FILE>D:\FA_PRO\TSLinkAP\TSLeaveAP.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\LeaveAP.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+       <ITEM_NAME>Flash_LAN_MAC地址</ITEM_NAME>         
+	   <BATCH_FILE>D:\BURNIN\LANID\Write_LANID.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Write_Lanid.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	   <ITEM_NAME>连接网络</ITEM_NAME>
+	   <BATCH_FILE>D:\BURNIN\Link\Link_net.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Link_net.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+	<TESTITEM>
+	   <ITEM_NAME>检查TS站别信息</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckTS.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\STAGE.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>准备TS过站信息</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\SFCS_XX\SFCS_TS.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\SFCS_TS.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+   </THREAD>
+  <THREAD NUM="2">
+	<TESTITEM>
+	   <ITEM_NAME>Waititem键盘背光灯测试</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread1_键盘背光灯测试.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	
+
+
+	<TESTITEM>
+	  <ITEM_NAME>USB20测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\PQAW_USB\USB20.py</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USB30.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+
+
+	<TESTITEM>
+	  <ITEM_NAME>USB30测试</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\PQAW_USB\USB30.py</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USB30.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>触屏测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\TouchPanel\TouchPanel.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\TouchPanel.jpg </PICTURE_FILE>
+	</TESTITEM>
+	<TESTITEM>
+	   <ITEM_NAME>WaititemIRCAMERA</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread1_IRCAMERA.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>键盘测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\KeyBoard\KBTEST.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\KBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>QR_Start1</ITEM_NAME>         
+	  <BATCH_FILE>D:\FA_PRO\LED_Auto\QRCode\ShowSN.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\LED_Auto.jpg</PICTURE_FILE>
+	</TESTITEM>	
+	
+  	<TESTITEM>
+	  <ITEM_NAME>WLAN分频器測試</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\WLAN\WlanTest.BAT</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\WlanTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+	
+	
+	
+   </THREAD>
+  <THREAD NUM="3">
+	<TESTITEM>
+	   <ITEM_NAME>Waititem盒盖测试</ITEM_NAME>        
+	   <BATCH_FILE>D:\TEST_UI\log\TSThread1_盒盖测试.OK</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>指纹识别测试</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\FingerPrint\FingerPrint.py</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\FingerPrint.jpg </PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>放电测试</ITEM_NAME>         
+	  <BATCH_FILE>D:\FA_PRO\Charge\DisCharge.py</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\DisCharge.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+  </THREAD>
+</STATION>
+
+  <STATION ID="BASETO"> 
+	<THREAD NUM="1">
+	<TESTITEM>
+	   <ITEM_NAME>连接网络</ITEM_NAME>
+	   <BATCH_FILE>D:\BURNIN\Link\Link_net.py</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Link_net.jpg</PICTURE_FILE>
+	</TESTITEM> 
+
+	<TESTITEM>
+	   <ITEM_NAME>检查TO站别信息</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckTO.PY</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>Runin更新测试程式</ITEM_NAME>
+	   <BATCH_FILE>D:\BURNIN\Update\TO_Update.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\TO_Update.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	   <ITEM_NAME>检查TO站别</ITEM_NAME>         
+	   <BATCH_FILE>D:\FA_PRO\BaseXML\GetSfcsInfo\CheckTO.PY</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\Shutdown.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+  </THREAD>
+</STATION>
+
+</TESTINFO>

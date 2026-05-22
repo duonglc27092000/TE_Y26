@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<TESTINFO>
+<MODEL>Jade1416_TD</MODEL>
+<STATION ID="BASEITEM">
+  <THREAD NUM="1">
+	<TESTITEM>
+	   <ITEM_NAME>检查机种</ITEM_NAME>           	
+	   <BATCH_FILE>D:\FA_PRO\CheckModel\CheckModel.bat</BATCH_FILE>
+	   <PICTURE_FILE>D:\TEST_UI\Picture_UI\CheckMode.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>指纹识别侦测</ITEM_NAME>        
+	  <BATCH_FILE>D:\FA_PRO\FingerPrint\PCheckFingerPrint.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\FingerPrint.jpg </PICTURE_FILE>
+	</TESTITEM>
+	
+	<TESTITEM>
+	  <ITEM_NAME>USB20</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\PQAW_USB\IOUSB20.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+	<TESTITEM>
+	  <ITEM_NAME>USB30</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\PQAW_USB\IOUSB30.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\USBTest.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+    <TESTITEM>
+	  <ITEM_NAME>PCBA测试完成</ITEM_NAME> 
+	  <BATCH_FILE>D:\FA_PRO\Shutdown\Complete.bat</BATCH_FILE>
+	  <PICTURE_FILE>D:\TEST_UI\Picture_UI\Defo.jpg</PICTURE_FILE>
+	</TESTITEM>
+
+       </THREAD>
+ </STATION>
+</TESTINFO>
